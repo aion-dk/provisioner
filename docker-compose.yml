@@ -1,0 +1,29 @@
+version: "3"
+services:
+  provisioner:
+    image: "provisioner:latest"
+    # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner:main"
+    build: "."
+    command: "./bin/start-sam-server"
+    working_dir: $PWD
+    ports:
+      - "3009:3009"
+    depends_on:
+      - "db"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - $PWD:$PWD
+    environment:
+      AWS_SAM_LOCAL: true
+      AWS_DEFAULT_REGION: "eu-west-1"
+      SAM_CLI_CONTAINER_CONNECTION_TIMEOUT: 20
+
+  db:
+    image: "amazon/dynamodb-local"
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    working_dir: "/home/dynamodblocal"
+    volumes:
+      - "./:/usr/src/app"
+      - "./data:/home/dynamodblocal/data"
+    ports:
+      - "8000:8000"
