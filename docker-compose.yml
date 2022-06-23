@@ -23,7 +23,6 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     working_dir: "/home/dynamodblocal"
     volumes:
-      - "./:/usr/src/app"
       - "./data:/home/dynamodblocal/data"
     ports:
       - "8000:8000"
