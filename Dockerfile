@@ -29,3 +29,6 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN sam build
+
+EXPOSE 3009
+CMD ["./bin/start-sam-server"]
