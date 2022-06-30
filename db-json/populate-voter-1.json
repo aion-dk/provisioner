@@ -247,7 +247,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "1"
@@ -628,7 +628,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "0"
@@ -910,7 +910,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "0"
@@ -1099,7 +1099,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "0"
@@ -1393,7 +1393,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "0"
@@ -1780,7 +1780,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "completedN": {
             "S": "0"

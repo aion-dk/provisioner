@@ -163,7 +163,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "VIDN_electionId_latMode": {
             "S": "B00000000001|0C7A901A-E8FE-4601-8417-5D0823159D42|1"
@@ -526,7 +526,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "VIDN_electionId_latMode": {
             "S": "B00000000005|0C7A901A-E8FE-4601-8417-5D0823159D42|1"
@@ -892,7 +892,7 @@
             "S": "4"
           },
           "ballotID": {
-            "S": "4"
+            "S": "precinct_4_bedrock"
           },
           "VIDN_electionId_latMode": {
             "S": "B00000000009|0C7A901A-E8FE-4601-8417-5D0823159D42|1"
