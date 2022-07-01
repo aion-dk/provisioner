@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 aws dynamodb delete-table --table-name abc_application_local --endpoint-url http://localhost:8000  --output json --no-paginate
 aws dynamodb create-table --cli-input-json file://db-json/create-application-table.json --endpoint-url http://localhost:8000  --output json --no-paginate
 

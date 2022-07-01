@@ -9,7 +9,7 @@ $ docker compose up -d
 ### Seed the database with sample data
 
 ```bash
-$ ./db-init.sh # seed data
+$ ./bin/seed
 ```
 
 ### Set the current election
