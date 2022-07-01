@@ -9,6 +9,7 @@ services:
       - "3009:3009"
     depends_on:
       - "db"
+      - "bucket"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "$PWD:$PWD"
@@ -25,3 +26,15 @@ services:
       - "./data:/home/dynamodblocal/data"
     ports:
       - "8000:8000"
+
+  bucket:
+    image: "halverneus/static-file-server:latest"
+    volumes:
+      - "./bucket:/usr/src/bucket"
+    ports:
+      - "8080:8080"
+    environment:
+      FOLDER: "/usr/src/bucket"
+      CORS: "true"
+      DEBUG: "true"
+      HOST: ""
