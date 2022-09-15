@@ -1,6 +1,6 @@
 {
   "Parameters": {
     "AWS_SAM_LOCAL": true,
-    "DEV_ENVIRONMENT": "Linux"
+    "DB_HOST": "http://db:8000"
   }
 }
