@@ -1,8 +1,8 @@
 version: "3"
 services:
-  provisioner:
-    image: "provisioner:latest"
-    # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner:main"
+  api:
+    image: "provisioner-api:latest"
+    # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner-api:main"
     build: "."
     working_dir: "$PWD"
     ports:
@@ -17,6 +17,19 @@ services:
       AWS_SAM_LOCAL: "true"
       AWS_DEFAULT_REGION: "eu-west-1"
       SAM_CLI_CONTAINER_CONNECTION_TIMEOUT: 20
+
+  ui:
+    image: "provisioner-ui:latest"
+    # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner-ui:main"
+    command: "npm run dev"
+    build: "./admin-ui"
+    depends_on:
+      - "db"
+    volumes:
+      - "./admin-ui:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "3021:3021"
 
   db:
     image: "amazon/dynamodb-local"
