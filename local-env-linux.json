@@ -1,5 +1,6 @@
 {
   "Parameters": {
+    "AWS_SAM_LOCAL": true,
     "DEV_ENVIRONMENT": "Linux"
   }
 }

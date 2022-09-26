@@ -24,6 +24,7 @@ Globals:
         ELECTIONS_DOCUMENT_BUCKET: !Sub "abc-documents-${environment}"
         UPLOAD_BUCKET: !Sub "abc-uploads-${environment}"
         AUTHORIZATION_FUNCTION: !Sub "AUTHORIZATION-FUNCTION-${environment}"
+        DB_HOST: "http://provisioner-db:8000"
   Api:
     # Allows any site to call these APIs (can restrict by replacing asterisk with site name)
     # Automatically adds AllowMethods with a list of methods for this API

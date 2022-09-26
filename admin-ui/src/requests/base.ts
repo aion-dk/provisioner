@@ -19,7 +19,8 @@ export const post = async (path: string, data: object={}, optionalParams: option
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer 46294A404E635266556A576E5A723475',
-        ...headers,        
+        'Access-Control-Allow-Origin': '*',
+        ...headers,
       }
     })
   } catch (err: any) {
@@ -32,7 +33,7 @@ export const post = async (path: string, data: object={}, optionalParams: option
         errors: [
           err.response?.data?.detail
         ]
-      })  
+      })
     }
   }
   if (response.status === 200) {
@@ -58,6 +59,7 @@ export const get = async (path: string, optionalParams: optionalParamsType = {he
         ...headers,
         'Authorization': 'Bearer 46294A404E635266556A576E5A723475',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       }
     })
     if (response.status === 500) {
@@ -113,7 +115,7 @@ export const uploadFile = async (path: string, file: File,  data: {[k: string]: 
 
 
   const { defaultReturn, headers } = optionalParams
-  
+
   // return await post(path, formData, {
   //   headers: {
   //     ...headers,

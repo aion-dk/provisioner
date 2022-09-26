@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 ENV NODE_VERSION=14.x
-ENV SAM_VERSION=v1.52.0
+ENV SAM_VERSION=v1.56.1
 ENV SAM_CLI_TELEMETRY=0
 
 RUN apt-get update && yes | apt-get install ca-certificates curl unzip gnupg lsb-release
