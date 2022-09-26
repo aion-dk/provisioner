@@ -7,13 +7,15 @@ services:
     build: "./admin-ui"
     depends_on:
       - "api"
+    links:
+      - "api:provisioner-api"
     volumes:
       - "./admin-ui:/usr/src/app"
       - "/usr/src/app/node_modules"
     ports:
       - "3021:3021"
     environment:
-      NEXT_PUBLIC_API_URL_BASE: "http://localhost:3009"
+      NEXT_PUBLIC_API_URL_BASE: "http://provisioner-api:3009"
 
   api:
     image: "provisioner-api:latest"
@@ -23,7 +25,7 @@ services:
     ports:
       - "3009:3009"
     depends_on:
-      - "db"
+      - "provisioner-db"
       - "bucket"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
@@ -32,12 +34,13 @@ services:
       AWS_SAM_LOCAL: "true"
       AWS_DEFAULT_REGION: "eu-west-1"
       SAM_CLI_CONTAINER_CONNECTION_TIMEOUT: 20
-
       # The below is not really working atm but it serves as documentation.
-      # Change ./lambda-env.json for the real one.
-      DB_HOST: "http://db:8000"
+      # Change ./template.yaml for the real one.
+      DB_HOST: "http://provisioner-db:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
-  db:
+  provisioner-db:
     image: "amazon/dynamodb-local"
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     working_dir: "/home/dynamodblocal"
