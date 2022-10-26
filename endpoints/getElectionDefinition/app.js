@@ -15,6 +15,6 @@ exports.lambdaHandler = async (event, context, callback) => {
   // const definition = await election.electionDefinition();
 
   return ApiResponse.makeResponse(200, {
-    electionDefinitionURL: "http://bucket:8080/edfs/precinct_4_bedrock.json"
+    electionDefinitionURL: "http://bucket:8081/edfs/precinct_4_bedrock.json"
   });
 };
