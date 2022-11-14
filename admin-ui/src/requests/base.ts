@@ -23,9 +23,10 @@ export const post = async (
       //withCredentials: true,
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer 46294A404E635266556A576E5A723475",
+        "Authorization": "Bearer 46294A404E635266556A576E5A723475",
+        "Access-Control-Allow-Origin": "*",
         ...headers,
-      },
+      }
     });
   } catch (err: any) {
     console.error(err);
@@ -60,10 +61,11 @@ export const get = async (
     const response = await axios.get(url, {
       //withCredentials: true,
       headers: {
-        ...headers,
-        Authorization: "Bearer 46294A404E635266556A576E5A723475",
+        "Authorization": "Bearer 46294A404E635266556A576E5A723475",
         "Content-Type": "application/json",
-      },
+        "Access-Control-Allow-Origin": "*",
+        ...headers,
+      }
     });
     if (response.status === 500) {
       throw response.statusText;

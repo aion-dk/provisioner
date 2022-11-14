@@ -1,0 +1,10 @@
+#!/bin/sh
+
+sam local start-api \
+  --port 3009 \
+  --host '0.0.0.0' \
+  --container-host 'host.docker.internal' \
+  --warm-containers LAZY \
+  --skip-pull-image --debug \
+  --container-host-interface '0.0.0.0' \
+  --docker-network 'provisioner_default'

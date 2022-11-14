@@ -24,14 +24,15 @@ Globals:
         ELECTIONS_DOCUMENT_BUCKET: !Sub "abc-documents-${environment}"
         UPLOAD_BUCKET: !Sub "abc-uploads-${environment}"
         AUTHORIZATION_FUNCTION: !Sub "AUTHORIZATION-FUNCTION-${environment}"
+        DB_HOST: "http://provisioner-db:8000"
   Api:
     # Allows any site to call these APIs (can restrict by replacing asterisk with site name)
     # Automatically adds AllowMethods with a list of methods for this API
-    EndpointConfiguration: EDGE      
+    EndpointConfiguration: EDGE
     Cors:
       AllowMethods: "'*'"
       AllowHeaders: "'Content-Type'"
-      AllowOrigin: "'*'" 
+      AllowOrigin: "'*'"
 
 Resources:
   Documents:
@@ -216,7 +217,7 @@ Resources:
     Properties:
       Name: !Sub "abc-backend__${environment}"
       StageName: !Sub "${environment}"
-      # BinaryMediaTypes: 
+      # BinaryMediaTypes:
       #   - "*~1*"
       Cors:
         AllowMethods: "'*'"
@@ -376,7 +377,7 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Sub "abc_elections_${environment}"
         - DynamoDBCrudPolicy:
-            TableName: !Sub "abc_application_${environment}"        
+            TableName: !Sub "abc_application_${environment}"
         - DynamoDBCrudPolicy:
             TableName: !Sub "abc_voters_${environment}"
   getElectionDefinitionFunction:
@@ -403,7 +404,7 @@ Resources:
             BucketName: !Sub "abc-uploads-${environment}"
         - S3CrudPolicy:
             BucketName: !Sub "abc-documents-${environment}"
-  
+
   getElectionDefinitionStatusFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
@@ -934,7 +935,7 @@ Resources:
             Method: Any
             Auth:
               Authorizer: null
-            
+
 
   AuthorizationFunction:
     Type: AWS::Serverless::Function
