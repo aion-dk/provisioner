@@ -63,6 +63,8 @@ services:
 
   fileserver:
     image: "mayth/simple-upload-server:latest"
+    volumes:
+      - "./fileserver:/var/root"
     ports:
       - "25478:25478"
     command: -cors -token f9403fc5f537b4ab332d /var/root
