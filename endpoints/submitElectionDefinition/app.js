@@ -3,6 +3,7 @@ const {
   ApiResponse,
   ApiRequire,
   FileServer,
+  FileInProcessing,
 } = require("/opt/Common");
 
 exports.lambdaHandler = async (event, context, callback) => {
@@ -49,6 +50,17 @@ exports.lambdaHandler = async (event, context, callback) => {
     });
 
     console.debug("Done updating election...");
+
+    // console.log("Incrementing progress");
+    // await FileInProcessing.incrementProgress(EDFFile, "complete", message);
+    // console.log("");
+
+    // console.log("Getting file being processed");
+    // const fileBeingProcessed = await FileInProcessing.findByUUID(EDFFile);
+    // console.log("New:");
+    // console.log(fileBeingProcessed.attributes);
+    // console.log(fileBeingProcessed.attributes.status);
+
     if (success) {
       return ApiResponse.makeResponse(200, { uuid: EDFFile });
     } else {
