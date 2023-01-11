@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { Maybe } from "types";
 export const API_URL_BASE =
-  process.env.NEXT_PUBLIC_API_URL_BASE || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_API_URL_BASE || "http://localhost:3009";
 
 const USE_DEFAULT_RETURN = false;
 
@@ -23,10 +23,10 @@ export const post = async (
       //withCredentials: true,
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 46294A404E635266556A576E5A723475",
+        Authorization: "Bearer 46294A404E635266556A576E5A723475",
         "Access-Control-Allow-Origin": "*",
         ...headers,
-      }
+      },
     });
   } catch (err: any) {
     console.error(err);
@@ -61,11 +61,11 @@ export const get = async (
     const response = await axios.get(url, {
       //withCredentials: true,
       headers: {
-        "Authorization": "Bearer 46294A404E635266556A576E5A723475",
+        Authorization: "Bearer 46294A404E635266556A576E5A723475",
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         ...headers,
-      }
+      },
     });
     if (response.status === 500) {
       throw response.statusText;
@@ -95,43 +95,62 @@ function readFileAsync(file: File) {
   });
 }
 
+const toBase64 = (file: File) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+
+// In MVP /provisionUpload also saves the file locally and serves it (acting as mock upload)
+export const uploadFileNew = async (file: File) => {
+  const { uploadUrl, fileName } = await post("/provisionUpload", {
+    contentType: file.type,
+  });
+
+  const formData = new FormData();
+  formData.append("file", file);
+  const res = await axios.put(uploadUrl, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  console.log(res);
+
+  return fileName;
+};
+
 export const uploadFile = async (
   path: string,
   file: File,
   data: { [k: string]: any } = {},
   optionalParams: optionalParamsType = { headers: {} }
 ) => {
-  const { uploadUrl, fileName } = await post("/provisionUpload", {
-    contentType: file.type,
-  });
-
   // const formData = new FormData();
-  // Object.keys(data).forEach(k=>{
+  // Object.keys(data).forEach((k) => {
   //   if (data[k]) {
-  //     formData.append(k, data[k])
+  //     formData.append(k, data[k]);
   //   }
-  // })
-  // formData.append("file", file)
-
-  const response = await axios.put(uploadUrl, file, {
-    headers: {
-      "Content-Type": file.type,
-    },
-  });
-  if (response) {
-    return fileName;
-  }
-
-  const { defaultReturn, headers } = optionalParams;
-
+  // });
+  // formData.append("file", file);
+  // const response = await axios.put(uploadUrl, file, {
+  //   headers: {
+  //     "Content-Type": file.type,
+  //   },
+  // });
+  // if (response) {
+  //   return fileName;
+  // }
+  // const { defaultReturn, headers } = optionalParams;
   // return await post(path, formData, {
   //   headers: {
   //     ...headers,
-  //     'Authorization': 'Bearer 46294A404E635266556A576E5A723475',
-  //     'Content-Type': 'multipart/form-data'
+  //     Authorization: "Bearer 46294A404E635266556A576E5A723475",
+  //     "Content-Type": "multipart/form-data",
   //   },
-  //   defaultReturn
-  // })
+  //   defaultReturn,
+  // });
 };
 
 export interface SuccessResult {
