@@ -29,7 +29,7 @@ export default function Nav() {
   ]
   if (user) {
     menuItems.splice(0,0, ["Dashboard", "/dashboard"])
-    menuItems.push(["Logout", logout])
+    // menuItems.push(["Logout", logout])
   }
 
   return <AppBar position="fixed">
