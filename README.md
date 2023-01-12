@@ -15,7 +15,10 @@ $ ./bin/seed
 ### Example Request
 
 ```bash
-$ curl -XPOST http://provisioner-api:3009/setCurrentElection -H 'Content-Type: application/json' -d '{"electionId": "0c7a901a-e8fe-4601-8417-5d0823159d42"}'
+$ curl -X POST http://provisioner-api:3009/setCurrentElection --data '{"electionId": "0c7a901a-e8fe-4601-8417-5d0823159d42"}'
+$ curl -X POST http://provisioner-api:3009/lookupVoterEmail --data '{"VIDN":"B00000000001"}'
+$ curl -X POST http://provisioner-api:3009/getElection
+$ curl -X POST http://provisioner-api:3009/getCurrentElection
 ```
 
 ## Taking a peek at the data
