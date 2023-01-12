@@ -33,27 +33,101 @@
       "BallotStyle": [
         {
           "@type": "ElectionResults.BallotStyle",
+          "ImageUri": [
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102A.pdf"
+            },
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102B.pdf"
+            },
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102C.pdf"
+            }
+          ],
           "GpUnitIds": [
-            "8116a0ca"
+            "4dac4917"
           ],
           "OrderedContent": [
             {
               "@type": "ElectionResults.OrderedContest",
-              "ContestId": "",
+              "ContestId": "1ff796cf",
               "OrderedContestSelectionIds": [
                 "e48e8c99",
-                "01add619",
-                "26db91f3"
+                "85a26ef0",
+                "02cf6092",
+                "2e3932c9",
+                "f6a0bbbb",
+                "3cddfe3a",
+                "243367e1",
+                "e93ce5bb",
+                "cbcd9c44",
+                "7b92c5b3",
+                "971cd08c",
+                "5b387e38",
+                "ea09bb11",
+                "f76c6fec",
+                "ba709e3d",
+                "afbf6775",
+                "30a324d8",
+                "94d6c054",
+                "3fb9cad0",
+                "6d3f60cf",
+                "cc0c3dea"
               ]
             },
             {
               "@type": "ElectionResults.OrderedContest",
-              "ContestId": "",
+              "ContestId": "a6ba1226",
+              "OrderedContestSelectionIds": [
+                "01add619",
+                "513f1437",
+                "34fcf1b7",
+                "16fcb4a6",
+                "afc45737",
+                "cb5ec9c4"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "e344a51d",
+              "OrderedContestSelectionIds": [
+                "26db91f3",
+                "e123de04",
+                "99f7676e",
+                "e28ffa81",
+                "8ef8c29b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "64ce88ab",
               "OrderedContestSelectionIds": [
                 "f7619d85",
+                "1901a46d",
+                "54721dbb",
+                "ebfe96d2"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "b2404ffd",
+              "OrderedContestSelectionIds": [
                 "b5198693",
+                "ba90bc9b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "ec614a6d",
+              "OrderedContestSelectionIds": [
                 "e4e05d8a",
-                "f67bba01"
+                "20074880"
               ]
             }
           ],
@@ -72,7 +146,7 @@
           "@type": "ElectionResults.CandidateContest",
           "@id": "1ff796cf",
           "Name": "Presidential Electors",
-          "ElectionDistrictId": "8116a0ca",
+          "ElectionDistrictId": "e06391d6",
           "OfficeIds": [
             "c937ab5e"
           ],
@@ -83,28 +157,153 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "e48e8c99",
               "CandidateIds": [
-                "ab729395",
-                "967e43a0",
-                "6417c88c",
-                "77ada04e",
-                "0c5dee1e",
-                "1b46cfb8",
-                "36bc5cb5",
-                "4564301b",
-                "0b52ab3a",
-                "153a9292",
-                "2870775a",
-                "1ed6ca12",
-                "72c7e489",
-                "5ae5be92",
-                "09b2725b",
-                "098b6d4c",
-                "e4797118",
-                "2cf94ff0",
-                "6172a592",
-                "bb5e94dd",
+                "ab729395"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "85a26ef0",
+              "CandidateIds": [
+                "967e43a0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "02cf6092",
+              "CandidateIds": [
+                "6417c88c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "2e3932c9",
+              "CandidateIds": [
+                "77ada04e"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "f6a0bbbb",
+              "CandidateIds": [
+                "0c5dee1e"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "3cddfe3a",
+              "CandidateIds": [
+                "1b46cfb8"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "243367e1",
+              "CandidateIds": [
+                "36bc5cb5"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e93ce5bb",
+              "CandidateIds": [
+                "4564301b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "67b84f68",
+              "CandidateIds": [
+                "0b52ab3a"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cbcd9c44",
+              "CandidateIds": [
+                "153a9292"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "7b92c5b3",
+              "CandidateIds": [
+                "2870775a"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "971cd08c",
+              "CandidateIds": [
+                "1ed6ca12"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "5b387e38",
+              "CandidateIds": [
+                "72c7e489"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ea09bb11",
+              "CandidateIds": [
+                "5ae5be92"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "f76c6fec",
+              "CandidateIds": [
+                "09b2725b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ba709e3d",
+              "CandidateIds": [
+                "098b6d4c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "afbf6775",
+              "CandidateIds": [
+                "e4797118"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "30a324d8",
+              "CandidateIds": [
+                "2cf94ff0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "94d6c054",
+              "CandidateIds": [
+                "6172a592"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "3fb9cad0",
+              "CandidateIds": [
+                "bb5e94dd"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "6d3f60cf",
+              "CandidateIds": [
                 "43df9732"
               ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cc0c3dea",
+              "IsWriteIn": true
             }
           ]
         },
@@ -123,12 +322,41 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "01add619",
               "CandidateIds": [
-                "2d14b231",
-                "0b6b5c22",
-                "d8747749",
-                "382f3020",
+                "2d14b231"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "513f1437",
+              "CandidateIds": [
+                "0b6b5c22"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "34fcf1b7",
+              "CandidateIds": [
+                "d8747749"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "16fcb4a6",
+              "CandidateIds": [
+                "382f3020"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "afc45737",
+              "CandidateIds": [
                 "e2fe60b2"
               ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cb5ec9c4",
+              "IsWriteIn": true
             }
           ]
         },
@@ -136,7 +364,7 @@
           "@type": "ElectionResults.CandidateContest",
           "@id": "e344a51d",
           "Name": "Representative to the 117th United States Congress - District 1",
-          "ElectionDistrictId": "8116a0ca",
+          "ElectionDistrictId": "e06391d6",
           "OfficeIds": [
             "9dc07fc0"
           ],
@@ -147,10 +375,34 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "26db91f3",
               "CandidateIds": [
-                "fbd037cd",
-                "6a90a22c",
-                "33efcb24",
-                "ab37cbb9",
+                "fbd037cd"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e123de04",
+              "CandidateIds": [
+                "6a90a22c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "99f7676e",
+              "CandidateIds": [
+                "33efcb24"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e28ffa81",
+              "CandidateIds": [
+                "ab37cbb9"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "8ef8c29b",
+              "CandidateIds": [
                 "9ca31cdf"
               ]
             }
@@ -171,9 +423,27 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "f7619d85",
               "CandidateIds": [
-                "12855964",
-                "113a9cbe",
-                "d6c9b447",
+                "12855964"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "1901a46d",
+              "CandidateIds": [
+                "113a9cbe"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "54721dbb",
+              "CandidateIds": [
+                "d6c9b447"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ebfe96d2",
+              "CandidateIds": [
                 "0515b33c"
               ]
             }
@@ -194,7 +464,13 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "b5198693",
               "CandidateIds": [
-                "349b43b5",
+                "349b43b5"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ba90bc9b",
+              "CandidateIds": [
                 "3fd75b98"
               ]
             }
@@ -215,7 +491,13 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "e4e05d8a",
               "CandidateIds": [
-                "2f0470d0",
+                "2f0470d0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "20074880",
+              "CandidateIds": [
                 "f4b0b13c"
               ]
             }
@@ -2471,6 +2753,7 @@
       "@id": "424a826c",
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
+        "Label": "Democratic",
         "Text": [
           {
             "@type": "ElectionResults.LanguageString",
@@ -2906,7 +3189,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "c937ab5e",
-      "IsPartisan": false,
+      "IsPartisan": true,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
@@ -2926,7 +3209,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "f92e5c77",
-      "IsPartisan": false,
+      "IsPartisan": true,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
@@ -2946,7 +3229,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "9dc07fc0",
-      "IsPartisan": false,
+      "IsPartisan": true,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
@@ -2986,7 +3269,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "241bd8ff",
-      "IsPartisan": false,
+      "IsPartisan": true,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
@@ -3104,7 +3387,35 @@
       }
     }
   ],
+  "Person": [
+
+  ],
   "GpUnit": [
+    {
+      "Type": "country",
+      "@type": "ElectionResults.ReportingUnit",
+      "@id": "e06391d6",
+      "ComposingGpUnitIds": [
+        "8116a0ca"
+      ],
+      "Name": {
+        "Text": [
+          {
+            "Content": "United States of America",
+            "Language": "en",
+            "Label": "USA",
+            "@type": "ElectionResults.LanguageString"
+          },
+          {
+            "Content": "Estados Unidos de America",
+            "Language": "es",
+            "Label": "EUA",
+            "@type": "ElectionResults.LanguageString"
+          }
+        ],
+        "@type": "ElectionResults.InternationalizedText"
+      }
+    },
     {
       "Type": "state",
       "@type": "ElectionResults.ReportingUnit",
@@ -3117,11 +3428,13 @@
           {
             "Content": "State of Colorado",
             "Language": "en",
+            "Label": "Colorado",
             "@type": "ElectionResults.LanguageString"
           },
           {
             "Content": "Estado de Colorado",
             "Language": "es",
+            "Label": "Colorado",
             "@type": "ElectionResults.LanguageString"
           }
         ],
@@ -3129,7 +3442,7 @@
       }
     },
     {
-      "Type": "county",
+      "Type": "precinct",
       "@type": "ElectionResults.ReportingUnit",
       "@id": "4dac4917",
       "ComposingGpUnitIds": [ ],
@@ -3138,11 +3451,13 @@
           {
             "Content": "Denver County",
             "Language": "en",
+            "Label": "Denver",
             "@type": "ElectionResults.LanguageString"
           },
           {
             "Content": "Condado de Denver",
             "Language": "es",
+            "Label": "Denver",
             "@type": "ElectionResults.LanguageString"
           }
         ],

@@ -16,7 +16,7 @@ interface FileUploadParams {
 export default function FileUpload({
   onLoadFile,
   multiple
-}: FileUploadParams) {  
+}: FileUploadParams) {
   const [alertText, setAlertText] = useState<string>("");
   const [processing, setProcessing] = useState<boolean>(false);
 
@@ -69,7 +69,7 @@ export default function FileUpload({
 
   const box = processing ? <Box sx={boxStyles}>Uploading Files</Box> : <Box {...getRootProps()} sx={boxStyles}>
     <input {...getInputProps()} />
-    Drag and drop a .zip file{multiple ? 's' : ''} here<br/><br/>
+    Drag and drop the EDF file{multiple ? 's' : ''} here<br/><br/>
     <Button>Select</Button>
   </Box>
 

@@ -10,4 +10,4 @@ notes/*
 v-deploy.sh
 data/
 
-fileserver/*
+uploads/*.*
