@@ -174,7 +174,6 @@ export const setBallotDefinitions = async (
   );
 };
 
-// 2022-december-demo (previous implementation of setElectionVoters is kept above)
 export const setElectionVoters = async (electionId: string, voterListFile: File) => {
   const contents = await voterListFile.text()
   const voterList = d3.csvParse(contents);
@@ -186,23 +185,6 @@ export const setElectionVoters = async (electionId: string, voterListFile: File)
       voterList
     }
   );
-
-  // 2022-december-demo update
-  // const fileName = await uploadFile(`/setElectionVoters`, voterListFile, {
-  //   electionId,
-  // });
-
-  // await sleep(2000);
-
-  // const result = await post(`/setElectionVoters`, {
-  //   electionId,
-  //   objectId: fileName,
-  //   latMode: false,
-  // });
-
-  // return {
-  //   objectKey: fileName,
-  // };
 };
 
 export const setElectionDefinition = async (electionId: string, EDF: File) => {

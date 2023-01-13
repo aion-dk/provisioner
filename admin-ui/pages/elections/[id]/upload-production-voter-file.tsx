@@ -4,7 +4,6 @@ import { Button, Card, Grid, Paper, TextField, Typography } from '@mui/material'
 import { useContext, useEffect, useState } from 'react'
 import CheckIcon from '@mui/icons-material/Check';
 
-
 import Input from 'component/Input';
 
 import theme from 'theme'
@@ -25,29 +24,31 @@ import Loading from 'component/Loading';
 
 const UploadLiveVoterFile: NextPage = () => {
   const [election, setElection] = useState<Maybe<Election>>(null)
+
   const [voterFileUid, setVoterFileUid] = useState<string>(election?.votersFile || "");
   const [voterFileStatus, setVoterFileStatus] = useState<{[x: string]: any}>(election?.votersFile ? {status: "started"}: {});
+
   const router = useRouter();
   const { query } = router;
   const { id } = query;
 
   const electionId = Array.isArray(id) ? id[0] : id;
-  
-  const getVoterFileStatus = async () => {
-    if (voterFileUid) {
-      const resp = await getFileStatus(voterFileUid);
-      if (resp.status === "complete") {
-        loadElection();
-      }
-      setVoterFileStatus(resp)
-    }
-  }
 
-  useEffect(()=>{
-    if (voterFileUid) {
-      getVoterFileStatus();
-    }
-  }, [voterFileUid])
+  // const getVoterFileStatus = async () => {
+  //   if (voterFileUid) {
+  //     const resp = await getFileStatus(voterFileUid);
+  //     if (resp.status === "complete") {
+  //       loadElection();
+  //     }
+  //     setVoterFileStatus(resp)
+  //   }
+  // }
+
+  // useEffect(()=>{
+  //   if (voterFileUid) {
+  //     getVoterFileStatus();
+  //   }
+  // }, [voterFileUid])
 
   const loadElection = async () => {
     if (electionId) {
@@ -57,12 +58,10 @@ const UploadLiveVoterFile: NextPage = () => {
   }
 
   useEffect(()=> {
-    
     if (electionId) {
       loadElection();
     }
   }, [electionId])
-
 
   return <LoggedInLayout title="Create Election">
     {election && <Grid container spacing={4}>
@@ -104,7 +103,7 @@ const UploadLiveVoterFile: NextPage = () => {
         <Grid container spacing={2}>
           {voterFileStatus.status === "complete" && <Grid item alignItems="center">
             <CheckIcon color="success"/> <span>Voter File Uploaded</span>
-          </Grid>} 
+          </Grid>}
         </Grid>
         <CompletedCheckbox isComplete={election?.voterCount > 0}>
           {election?.voterCount || 0} voters uploaded
