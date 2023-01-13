@@ -1,0 +1,3468 @@
+{
+  "@type": "ElectionResults.ElectionReport",
+  "Format": "precinct-level",
+  "GeneratedDate": "2022-12-20T10:43:07Z",
+  "VendorApplicationId": "ElectionReporter",
+  "Issuer": "AssemblyVoting",
+  "IssuerAbbreviation": "AV",
+  "Status": "pre-election",
+  "SequenceStart": 1,
+  "SequenceEnd": 1,
+  "Election": [
+    {
+      "@type": "ElectionResults.Election",
+      "ElectionScopeId": "8116a0ca",
+      "StartDate": "2022-12-20",
+      "EndDate": "2023-01-30",
+      "Type": "general",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Official General Election",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Elección General Oficial",
+            "Language": "es"
+          }
+        ]
+      },
+      "BallotStyle": [
+        {
+          "@type": "ElectionResults.BallotStyle",
+          "ImageUri": [
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102A.pdf"
+            },
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102B.pdf"
+            },
+            {
+              "@type": "ElectionResults.AnnotatedUri",
+              "Annotation": "application/pdf",
+              "Content": "https://bucket:8080/ballots/denver-general-2020/102C.pdf"
+            }
+          ],
+          "GpUnitIds": [
+            "4dac4917"
+          ],
+          "OrderedContent": [
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "1ff796cf",
+              "OrderedContestSelectionIds": [
+                "e48e8c99",
+                "85a26ef0",
+                "02cf6092",
+                "2e3932c9",
+                "f6a0bbbb",
+                "3cddfe3a",
+                "243367e1",
+                "e93ce5bb",
+                "cbcd9c44",
+                "7b92c5b3",
+                "971cd08c",
+                "5b387e38",
+                "ea09bb11",
+                "f76c6fec",
+                "ba709e3d",
+                "afbf6775",
+                "30a324d8",
+                "94d6c054",
+                "3fb9cad0",
+                "6d3f60cf",
+                "cc0c3dea"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "a6ba1226",
+              "OrderedContestSelectionIds": [
+                "01add619",
+                "513f1437",
+                "34fcf1b7",
+                "16fcb4a6",
+                "afc45737",
+                "cb5ec9c4"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "e344a51d",
+              "OrderedContestSelectionIds": [
+                "26db91f3",
+                "e123de04",
+                "99f7676e",
+                "e28ffa81",
+                "8ef8c29b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "64ce88ab",
+              "OrderedContestSelectionIds": [
+                "f7619d85",
+                "1901a46d",
+                "54721dbb",
+                "ebfe96d2"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "b2404ffd",
+              "OrderedContestSelectionIds": [
+                "b5198693",
+                "ba90bc9b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.OrderedContest",
+              "ContestId": "ec614a6d",
+              "OrderedContestSelectionIds": [
+                "e4e05d8a",
+                "20074880"
+              ]
+            }
+          ],
+          "ExternalIdentifier": [
+            {
+              "@type": "ElectionResults.ExternalIdentifier",
+              "Type": "other",
+              "OtherType": "TTV",
+              "Value": "denver-colorado"
+            }
+          ]
+        }
+      ],
+      "Contest": [
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "1ff796cf",
+          "Name": "Presidential Electors",
+          "ElectionDistrictId": "e06391d6",
+          "OfficeIds": [
+            "c937ab5e"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e48e8c99",
+              "CandidateIds": [
+                "ab729395"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "85a26ef0",
+              "CandidateIds": [
+                "967e43a0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "02cf6092",
+              "CandidateIds": [
+                "6417c88c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "2e3932c9",
+              "CandidateIds": [
+                "77ada04e"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "f6a0bbbb",
+              "CandidateIds": [
+                "0c5dee1e"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "3cddfe3a",
+              "CandidateIds": [
+                "1b46cfb8"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "243367e1",
+              "CandidateIds": [
+                "36bc5cb5"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e93ce5bb",
+              "CandidateIds": [
+                "4564301b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "67b84f68",
+              "CandidateIds": [
+                "0b52ab3a"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cbcd9c44",
+              "CandidateIds": [
+                "153a9292"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "7b92c5b3",
+              "CandidateIds": [
+                "2870775a"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "971cd08c",
+              "CandidateIds": [
+                "1ed6ca12"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "5b387e38",
+              "CandidateIds": [
+                "72c7e489"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ea09bb11",
+              "CandidateIds": [
+                "5ae5be92"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "f76c6fec",
+              "CandidateIds": [
+                "09b2725b"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ba709e3d",
+              "CandidateIds": [
+                "098b6d4c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "afbf6775",
+              "CandidateIds": [
+                "e4797118"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "30a324d8",
+              "CandidateIds": [
+                "2cf94ff0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "94d6c054",
+              "CandidateIds": [
+                "6172a592"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "3fb9cad0",
+              "CandidateIds": [
+                "bb5e94dd"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "6d3f60cf",
+              "CandidateIds": [
+                "43df9732"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cc0c3dea",
+              "IsWriteIn": true
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "a6ba1226",
+          "Name": "United States Senator",
+          "ElectionDistrictId": "8116a0ca",
+          "OfficeIds": [
+            "f92e5c77"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "01add619",
+              "CandidateIds": [
+                "2d14b231"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "513f1437",
+              "CandidateIds": [
+                "0b6b5c22"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "34fcf1b7",
+              "CandidateIds": [
+                "d8747749"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "16fcb4a6",
+              "CandidateIds": [
+                "382f3020"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "afc45737",
+              "CandidateIds": [
+                "e2fe60b2"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "cb5ec9c4",
+              "IsWriteIn": true
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "e344a51d",
+          "Name": "Representative to the 117th United States Congress - District 1",
+          "ElectionDistrictId": "e06391d6",
+          "OfficeIds": [
+            "9dc07fc0"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "26db91f3",
+              "CandidateIds": [
+                "fbd037cd"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e123de04",
+              "CandidateIds": [
+                "6a90a22c"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "99f7676e",
+              "CandidateIds": [
+                "33efcb24"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e28ffa81",
+              "CandidateIds": [
+                "ab37cbb9"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "8ef8c29b",
+              "CandidateIds": [
+                "9ca31cdf"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "64ce88ab",
+          "Name": "State Board of Education Member - Congressional District 1",
+          "ElectionDistrictId": "8116a0ca",
+          "OfficeIds": [
+            "078b020f"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "f7619d85",
+              "CandidateIds": [
+                "12855964"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "1901a46d",
+              "CandidateIds": [
+                "113a9cbe"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "54721dbb",
+              "CandidateIds": [
+                "d6c9b447"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ebfe96d2",
+              "CandidateIds": [
+                "0515b33c"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "b2404ffd",
+          "Name": "State Representative - District 1",
+          "ElectionDistrictId": "8116a0ca",
+          "OfficeIds": [
+            "241bd8ff"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "b5198693",
+              "CandidateIds": [
+                "349b43b5"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "ba90bc9b",
+              "CandidateIds": [
+                "3fd75b98"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.CandidateContest",
+          "@id": "ec614a6d",
+          "Name": "District Attorney - 2nd Judicial District",
+          "ElectionDistrictId": "8116a0ca",
+          "OfficeIds": [
+            "82b045d5"
+          ],
+          "VoteVariation": "n-of-m",
+          "VotesAllowed": 1,
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "e4e05d8a",
+              "CandidateIds": [
+                "2f0470d0"
+              ]
+            },
+            {
+              "@type": "ElectionResults.CandidateSelection",
+              "@id": "20074880",
+              "CandidateIds": [
+                "f4b0b13c"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "3b8b26f8",
+          "Name": "Colorado Supreme Court Justice",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall Justice Melissa Hart of the Colorado Supreme Court be retained in office?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Deberia conservar su cargo la jueza Melissa Hart de la Suprema Corte de Colorado?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "f67bba01",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "114e8f30",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No",
+                    "Language": "en"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "a250ce59",
+          "Name": "Colorado Court of Appeals Judge",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall Judge Ted C. Tow III of the Colorado Court of Appeals be retained in office?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Deberia conservar su cargo el juez Ted C. Tow III del Tribunal de Apelaciones de Colorado?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "199c83ff",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "0170a137",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No",
+                    "Language": "en"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "f6af731f",
+          "Name": "District Court Judge - 2nd Judicial District",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall Judge Christopher J. Baumann of the 2nd Judicial District to be retained in office?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Deberia conservar su cargo el juez Christopher J. Baumann del Distrito Judicial 2?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "5be97f8d",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "9c46f9f0",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No",
+                    "Language": "en"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "e6d14486",
+          "Name": "County Court Judge - Denver",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall Judge Beth Ann Faragher of Denver County be retained in office?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Deberia conservar su cargo la jueza Beth Ann Faragher del Tribunal del Condado de Denver?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "b85aac3c",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "97f5b954",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No",
+                    "Language": "en"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "833709ff",
+          "Name": "Amendment B (Constitutional)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Without increasing property tax ratest...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Sin aumentar las tasas de los impuestos a la propriedad...¿?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "0ce2f12c",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "ed0ad06d",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "0aaf31e7",
+          "Name": "Amendment C (Constitutional)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be an amemdment to the Colorado constituition...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber una enmienda a la constituición de Colorado...",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "f910a4c2",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "7fa4284a",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "a67ff35d",
+          "Name": "Amendment 76 (Constitutional)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be an amemdment to the Colorado constituition...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber una enmienda a la constituición de Colorado...",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "d97e29c8",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "24717401",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "55184cd1",
+          "Name": "Amendment 77 (Constitutional)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be an amemdment to the Colorado constituition...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber una enmienda a la constituición de Colorado...",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "1f00d850",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "93d85bd4",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "6da46f9b",
+          "Name": "Proposition EE (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall state taxes be increased by...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe aumentarse los impuestos estatales en...",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "561a8314",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "0db3c8b0",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "682965c1",
+          "Name": "Proposition 113 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall state taxes be increased by...",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe aumentarse los impuestos estatales en...",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "2fbc2ebe",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "b6419e4e",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "127c88e3",
+          "Name": "Proposition 114 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be a change to the Colorado Revised Statutes concerning the restoration of gray wolves through their reintroduction on designated lands in Colorado located west of the continental divide, and, in connection therewith, requiring the Colorado parks and wildlife commission, after holding statewide hearings and using scientific data, to implement a plan to restore and manage gray wolves; prohibiting the commission from imposing any land, water, or resource use restrictions on private landowners to further the plan; and requiring the commission to fairly compensate owners for losses of livestock caused by gray wolves?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber un cambio a los Estatutos Revisados de Colorado en lo que respecta a la reintroducción de lobos grises al reintroducirlos en terrenos designados en Colorado situados al oeste de la línea divisoria continental y, en relación con ello, exigir a la comisión de parques y fauna de Colorado, después de llevar a cabo audiencias en todo el estado y utilizar datos científicos, para implementar un plan destinado a reintroducir y gestionar a los lobos grises; prohibiendo a la comisión que imponga restricciones de terreno, agua o recursos a los terratenientes privados para facilitar el plan; y exigiendo a la comisión que remunere de manera equitativa a los propietarios por pérdidas de ganado que causen los lobos grises?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "eb0468f1",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "b8d64b44",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "b5c19470",
+          "Name": "Proposition 115 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be a change to the Colorado Revised Statutes concerning prohibiting an abortion when the probable gestational age of the fetus is at least twenty-two weeks, and, in connection therewith, making it a misdemeanor punishable by a fine to perform or attempt to perform a prohibited abortion, except when the abortion is immediately required to save the life of the pregnant woman when her life is physically threatened, but not solely by a psychological or emotional condition; defining terms related to the measure including \"probable gestational age\" and \"abortion,\" and excepting from the definition of \"abortion\" medical procedures relating to miscarriage or ectopic pregnancy; specifying that a woman on whom an abortion is performed may not be charged with a crime in relation to a prohibited abortion; and requiring the Colorado medical board to suspend for at least three years the license of a licensee whom the board finds performed or attempted to perform a prohibited abortion?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber un cambio en los Estatutos Revisados de Colorado en cuanto a prohibir un aborto cuando la edad de gestación del feto es por lo menos de veintidós semanas y, en relación con ello, hacer delito menor castigable con una multa realizar o intentar realizar un aborto prohibido, salvo cuando el aborto sea requerido inmediatamente para salvar la vida de la madre embarazada cuando su vida se ve amenazada físicamente, pero no exclusivamente por una afección psicológica o emocional; definir los términos relacionados con la medida como \"edad de gestación probable\" y \"aborto\", y exceptuar de la definición de \"aborto\" los procedimientos médicos relacionados con interrupciones espontáneas del embarazo o embarazo ectópico; especificando que a una mujer a quien se realice un aborto no se le puede imputar un delito en relación con un aborto prohibido; y requerir que el Colegio Médico de Colorado suspenda por lo menos tres años la licencia de un titular de licencia que el colegio encuentre que haya realizado o intentado realizar un aborto prohibido?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "e3529027",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "5094848f",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "76e77a92",
+          "Name": "Proposition 116 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be a change to the Colorado Revised Statutes reducing the state income tax rate from 4.63% to 4.55%?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber un cambio en los Estatutos Revisados de Colorado que reduzca la tasa del impuesto estatal sobre la renta de 4.63% a 4.55%?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "cf941a9c",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "50d6d195",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "eebd0fa2",
+          "Name": "Proposition 117 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be a change to the Colorado Revised Statutes requiring statewide voter approval at the next even-year election of any newly created or qualified state enterprise that is exempt from the Taxpayer's Bill of Rights, Article X, Section 20 of the Colorado constitution, if the projected or actual combined revenue from fees and surcharges of the enterprise, and all other enterprises created within the last five years that serve primarily the same purpose, is greater than $100 million within the first five fiscal years of the creation or qualification of the new enterprise?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber un cambio en los Estatutos Revisados de Colorado que exija la aprobación de los votantes en todo el estado en la próxima elección de año par acerca de toda empresa estatal creada o calificada recientemente que esté exenta de la Sección 20 del Artículo X del Acta de derechos del contribuyente de la constitución de Colorado, si el ingreso proyectado o real combinado y los recargos de la empresa, y toda otra empresa creada dentro de los últimos cinco años que sirva principalmente para el mismo fin, es mayor de $100 millones en los primeros cinco años fiscales de la creación o calificación de la nueva empresa?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "df3794c3",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "4174ef69",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "fd265e35",
+          "Name": "Proposition 118 (Statutory)",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall there be a change to the Colorado Revised Statutes concerning the creation of a paid family and medical leave program in Colorado, and, in connection therewith, authorizing paid family and medical leave for a covered employee who has a serious health condition, is caring for a new child or for a family member with a serious health condition, or has a need for leave related to a family member's military deployment or for safe leave; establishing a maximum of 12 weeks of family and medical leave, with an additional 4 weeks for pregnancy or childbirth complications, with a cap on the weekly benefit amount; requiring job protection for and prohibiting retaliation against an employee who takes paid family and medical leave; allowing a local government to opt out of the program; permitting employees of such a local government and self-employed individuals to participate in the program; exempting employers who offer an approved private paid family and medical leave plan; to pay for the program, requiring a premium of 0.9% of each employee's wages, up to a cap, through December 31, 2024, and as set thereafter, up to 1.2% of each employee's wages, by the director of the division of family and medical leave insurance; authorizing an employer to deduct up to 50% of the premium amount from an employee's wages and requiring the employer to pay the remainder of the premium, with an exemption for employers with fewer than 10 employees; creating the division of family and medical leave insurance as an enterprise within the department of labor and employment to administer the program; and establishing an enforcement and appeals process for retaliation and denied claims?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Debe haber un cambio en los Estatutos Revisados de Colorado con respecto a la creación de un programa de permiso familiar y médico en Colorado, y, en relación con ello, autorizar el pago de un permiso familiar y médico para un empleado cubierto que haya tenido una afección grave de salud, esté encargado del cuidado de un recién nacido o adoptado o de un familiar con una afección grave de salud, o que tenga necesidad de permiso relacionado con el servicio militar de un familiar o de permiso de protección; establecer un máximo de 12 semanas de permiso familiar y médico, con 4 semanas adicionales por complicaciones de embarazo o de parto, con un tope en cuanto a la cantidad semanal del beneficio; requerir protección laboral y prohibir represalias contra un empleado que utilice el permiso pagado familiar y médico; permitir a un gobierno local optar por no participar en el programa; permitir a los empleados de dicho gobierno local y personas con negocio propio participar en el programa; eximir a los empleadores que ofrecen un plan aprobado privado de permiso pagado familiar y médico; para pagar el programa, requerir una prima de 0.9% del salario de cada empleado, hasta un tope, hasta el 31 de diciembre de 2024, y como se establezca en lo sucesivo, hasta 1.2% del salario de cada empleado, por parte del director de la división de seguro de permiso familiar y médico; autorizar a un empleador a deducir hasta 50% de la cantidad de la prima del salario de un empleado y requerir que el empleador pague el resto de la prima, con la exención de empleadores con menos de 10 empleados; crear la división de seguro de permiso familiar y médico como empresa dentro del departamento de trabajo y empleo para administrar el programa; y establecer un proceso para hacerlo respetar y presentar apelaciones por represalias y reclamaciones denegadas?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "ae433e8a",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "2c35db5a",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "6d85bc3c",
+          "Name": "Ballot Measure 2A",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "SHALL CITY AND COUNTY OF DENVER SALES AND USE TAXES BE INCREASED BY $40 MILLION ANNUALLY, COMMENCING JANUARY 1, 2021, AND BY WHATEVER ADDITIONAL AMOUNTS ARE RAISED ANNUALLY THEREAFTER, FROM A TWENTY-FIVE ONE- HUNDREDTHS OF ONE PERCENT (0.25%) SALES AND USE TAX RATE (2.5 CENTS ON A TEN-DOLLAR PURCHASE) WITH EXEMPTIONS FOR FOOD, WATER, FUEL, MEDICAL SUPPLIES, AND FEMININE HYGIENE PRODUCTS, TO BE USED TO FUND PROGRAMS TO ELIMINATE GREENHOUSE GAS EMISSIONS AND AIR POLLUTION, AND ADAPT TO CLIMATE CHANGE, INCLUDING: · JOB CREATION THROUGH LOCAL WORKFORCE TRAINING AND NEW CAREERS FOR UNDER-RESOURCED INDIVIDUALS IN RENEWABLE AND CLEAN ENERGY TECHNOLOGY AND MANAGEMENT OF NATURAL RESOURCES; · INCREASED INVESTMENTS IN SOLAR POWER, BATTERY STORAGE AND OTHER RENEWABLE ENERGY TECHNOLOGY; · NEIGHBORHOOD-BASED ENVIRONMENTAL AND CLIMATE JUSTICE PROGRAMS; · ADAPTATION AND RESILIENCY PROGRAMS THAT HELP VULNERABLE COMMUNITIES PREPARE FOR A CHANGING CLIMATE; · PROGRAMS AND SERVICES THAT PROVIDE AFFORDABLE, CLEAN, SAFE AND RELIABLE TRANSPORTATION CHOICES, LIKE WALKING, BIKING, TRANSIT, ELECTRIC VEHICLES, AND NEIGHBORHOOD-SCALE TRANSIT; AND · UPGRADE THE ENERGY EFFICIENCY OF HOMES, OFFICES AND INDUSTRY TO REDUCE THEIR CARBON FOOTPRINT, UTILITY BILLS, AND INDOOR AIR POLLUTION; THIS DEDICATED FUNDING SHOULD MAXIMIZE INVESTMENTS IN COMMUNITIES OF COLOR, UNDER RESOURCED COMMUNITIES, AND COMMUNITIES MOST VULNERABLE TO CLIMATE CHANGE AND ENDEAVOR TO INVEST 50% OF THE DEDICATED FUNDS DIRECTLY IN COMMUNITY WITH A STRONG LENS TOWARD EQUITY AND RACE AND SOCIAL JUSTICE; THE SPENDING OF FUNDS WILL BE OVERSEEN BY THE OFFICE OF CLIMATE ACTION, SUSTAINABILITY AND RESILIENCY AND THE CITIZEN'S SUSTAINABILITY COMMITTEE; ALL FUNDS WILL BE SUBJECT TO AN ANNUAL REPORT AVAILABLE FOR PUBLIC REVIEW; AND REQUIRING THAT REVENUES FROM THESE INCREASED TAXES SHALL BE COLLECTED AND SPENT WITHOUT REGARD TO ANY EXPENDITURE, REVENUE-RAISING, OR OTHER LIMITATION CONTAINED WITHIN ARTICLE X, SECTION 20 OF THE COLORADO CONSTITUTION OR ANY OTHER LAW?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿SE DEBERÍAN AUMENTAR LOS IMPUESTOS SOBRE LAS TRANSACCIONES Y EL USO DE LA CIUDAD Y EL CONDADO DE DENVER EN $40 MILLONES AL AÑO, A PARTIR DEL 1.º DE ENERO DE 2021, Y EN CUALQUIER CANTIDAD ADICIONAL EN QUE SE INCREMENTE ANUALMENTE A PARTIR DE VEINTICINCO CENTÉSIMAS DEL UNO POR CIENTO (0.25 %) DE LA TASA DE IMPUESTOS SOBRE LAS TRANSACCIONES Y EL USO (2.5 CENTAVOS EN UNA COMPRA DE DIEZ DÓLARES) CON EXENCIONES PARA ALIMENTOS, AGUA, COMBUSTIBLE, SUMINISTROS MÉDICOS Y PRODUCTOS DE HIGIENE FEMENINA, QUE SE UTILIZARÁN PARA FINANCIAR PROGRAMAS PARA ELIMINAR LAS EMISIONES DE GASES DE EFECTO INVERNADERO Y LA CONTAMINACIÓN DEL AIRE, Y ADAPTARSE AL CAMBIO CLIMÁTICO, INCLUIDO LO SIGUIENTE: · CREACIÓN DE EMPLEOS MEDIANTE LA CAPACITACIÓN DE LA FUERZA LABORAL LOCAL Y NUEVAS CARRERAS PARA PERSONAS DE ESCASOS RECURSOS EN TECNOLOGÍA DE ENERGÍA RENOVABLE Y LIMPIA Y GESTIÓN DE RECURSOS NATURALES; · MAYORES INVERSIONES EN ENERGÍA SOLAR, ALMACENAMIENTO DE BATERÍAS Y OTRAS TECNOLOGÍAS DE ENERGÍAS RENOVABLES; · PROGRAMAS DE JUSTICIA AMBIENTAL Y CLIMÁTICA CON BASE EN LOS VECINDARIOS; · PROGRAMAS DE ADAPTACIÓN Y RESILIENCIA QUE AYUDEN A COMUNIDADES VULNERABLES A PREPARARSE PARA UN CLIMA CAMBIANTE; · PROGRAMAS Y SERVICIOS QUE PROPORCIONEN OPCIONES DE TRANSPORTE ASEQUIBLES, LIMPIAS, SEGURAS Y CONFIABLES, COMO CAMINAR, ANDAR EN BICICLETA, TRANSPORTE, VEHÍCULOS ELÉCTRICOS Y TRÁNSITO A ESCALA DE VECINDARIO; Y · MEJORAR LA EFICIENCIA ENERGÉTICA DE HOGARES, OFICINAS E INDUSTRIA PARA REDUCIR EL IMPACTO ECOLÓGICO, LAS FACTURAS DE SERVICIOS PÚBLICOS Y LA CONTAMINACIÓN DEL AIRE INTERIOR; ¿ESTE FINANCIAMIENTO DEDICADO DEBERÍA MAXIMIZAR LAS INVERSIONES EN LAS COMUNIDADES DE COLOR, LAS COMUNIDADES CON ESCASOS RECURSOS Y LAS COMUNIDADES MÁS VULNERABLES AL CAMBIO CLIMÁTICO E INTENTAR INVERTIR EL 50 % DE LOS FONDOS DEDICADOS DIRECTAMENTE EN LA COMUNIDAD CON EL ENFOQUE PUESTO EN LA EQUIDAD Y JUSTICIA RACIAL Y SOCIAL; EL GASTO DE FONDOS SERÁ SUPERVISADO POR LA OFICINA DE ACCIÓN CLIMÁTICA, SUSTENTABILIDAD Y RESILIENCIA Y EL COMITÉ DE SUSTENTABILIDAD CIUDADANA; TODOS LOS FONDOS ESTARÁN SUJETOS A UN INFORME ANUAL DISPONIBLE PARA REVISIÓN PÚBLICA; Y SE REQUERIRÁ QUE LOS INGRESOS PROVENIENTES DEL AUMENTO DE ESTOS IMPUESTOS SE COBREN Y GASTEN SIN TOMAR EN CUENTA NINGÚN GASTO, AUMENTO DE INGRESOS O CUALQUIER OTRA LIMITACIÓN INCLUIDA EN EL ARTÍCULO X, SECCIÓN 20 DE LA CONSTITUCIÓN DE COLORADO O CUALQUIER OTRA LEY?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "6a423d0e",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "032b8a85",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "e872ef8a",
+          "Name": "Ballot Measure 2B",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "SHALL CITY AND COUNTY OF DENVER SALES AND USE TAXES BE INCREASED BY $40 MILLION ANNUALLY, COMMENCING JANUARY 1, 2021, AND BY WHATEVER ADDITIONAL AMOUNTS ARE RAISED ANNUALLY THEREAFTER, FROM A TWENTY-FIVE ONE-HUNDREDTHS OF ONE PERCENT (0.25%) SALES AND USE TAX RATE (2.5 CENTS ON A TEN-DOLLAR PURCHASE), THAT WILL NOT BE COLLECTED ON FOOD FOR HOME CONSUMPTION, WATER, FUEL, MEDICAL SUPPLIES OR FEMININE HYGIENE PRODUCTS, TO BE USED TO FUND HOUSING, SHELTER OR SERVICES FOR PEOPLE EXPERIENCING HOMELESSNESS, INCLUDING, BUT NOT LIMITED TO: · BUILDING HOUSING, EXPANDING RENTAL ASSISTANCE OR PROVIDING SUPPORTIVE SERVICES OR OTHER SUPPORTS TO HOUSE PEOPLE EXPERIENCING HOMELESSNESS; · EXPANDING THE NUMBER OF SHELTER BEDS, IMPROVING ACCESS FOR UNDERSERVED POPULATIONS, AND PROVIDING BETTER HEALTH AND HOUSING OUTCOMES THROUGH 24-HOUR SHELTER AND DROP-IN DAY SERVICES SUCH AS CORONAVIRUS PREVENTION, MENTAL HEALTH CARE, SUBSTANCE TREATMENT, HOUSING AND EMPLOYMENT COUNSELING, AND OTHER SERVICES; AND · PROVIDING MORE HOUSING REFERRALS AND OTHER SERVICES TO PEOPLE LIVING ON THE STREETS OR IN CARS TO HELP THEM EXIT HOMELESSNESS; AND, IN CONNECTION THEREWITH, SHALL NO MORE THAN EIGHT PERCENT (8%) OF THE TOTAL ANNUAL REVENUES DERIVED FROM THE INCREASE IN SALES AND USE TAX BE SPENT ON CITY ADMINISTRATIVE COSTS RELATED TO THE ABOVE PURPOSES; AND SHALL THE MONIES DERIVED FROM THE INCREASE IN SALES AND USE TAX NOT BE USED TO OFFSET ANY CURRENT REVENUE EXPENDITURES FROM THE GENERAL FUND; AND SHALL THE REVENUES FROM THESE INCREASED TAXES BE COLLECTED AND SPENT IN EACH FISCAL YEAR BY DENVER WITHOUT REGARD TO ANY EXPENDITURE, REVENUE-RAISING, OR OTHER LIMITATION CONTAINED WITHIN ARTICLE X, SECTION 20 OF THE COLORADO CONSTITUTION OR ANY OTHER LAW?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿SE DEBERÍAN AUMENTAR LOS IMPUESTOS SOBRE LAS TRANSACCIONES Y EL USO DE LA CIUDAD Y EL CONDADO DE DENVER EN $40 MILLONES AL AÑO, A PARTIR DEL 1.º DE ENERO DE 2021, Y EN CUALQUIER CANTIDAD ADICIONAL EN QUE SE INCREMENTE ANUALMENTE A PARTIR DE VEINTICINCO CENTÉSIMAS DEL UNO POR CIENTO (0.25 %) DE LA TASA DE IMPUESTOS SOBRE LAS TRANSACCIONES Y EL USO (2.5 CENTAVOS EN UNA COMPRA DE DIEZ DÓLARES), QUE NO SE COBRARÁN EN ALIMENTOS PARA CONSUMO EN EL HOGAR, AGUA, COMBUSTIBLE, SUMINISTROS MÉDICOS Y PRODUCTOS DE HIGIENE FEMENINA, QUE SE UTILIZARÁN PARA FINANCIAR PROGRAMAS DE ALOJAMIENTO, REFUGIO O SERVICIOS PARA PERSONAS SIN HOGAR, QUE INCLUYEN ENTRE OTROS: · CONSTRUCCIÓN DE VIVIENDAS, AMPLIACIÓN DE LA ASISTENCIA PARA ALQUILER O SERVICIOS DE APOYO U OTROS APOYOS PARA ALOJAR A LAS PERSONAS QUE NO TENGAN HOGAR; · AMPLIACIÓN DEL NÚMERO DE CAMAS EN REFUGIOS, MEJORAS EN EL ACCESO PARA POBLACIONES MARGINADAS Y MEJORES RESULTADOS EN SALUD Y VIVIENDA POR MEDIO DE SERVICIOS DE ALBERGUE Y SERVICIOS DIURNOS SIN CITA PREVIA, COMO PREVENCIÓN DEL CORONAVIRUS, ATENCIÓN DE SALUD MENTAL, TRATAMIENTO CONTRA EL ABUSO DE SUSTANCIAS, ASESORÍA SOBRE VIVIENDA Y EMPLEO, Y OTROS SERVICIOS; Y · PROPORCIONAR MÁS REFERENCIAS DE VIVIENDA Y OTROS SERVICIOS A LAS PERSONAS QUE VIVEN EN LAS CALLES O EN AUTOMÓVILES PARA AYUDARLAS A SALIR DE LA SITUACIÓN DE CALLE; Y, EN RELACIÓN CON ELLO, ¿SE DEBERÍA GASTAR UN MÁXIMO DEL OCHO POR CIENTO (8 %) DE LOS INGRESOS ANUALES TOTALES PROVENIENTES DEL AUMENTO DE LOS IMPUESTOS SOBRE LAS TRANSACCIONES Y EL USO EN COSTOS ADMINISTRATIVOS DE LA CIUDAD RELACIONADOS CON LOS PROPÓSITOS MENCIONADOS ANTERIORMENTE; Y EL DINERO PROVENIENTE DEL AUMENTO DEL IMPUESTO SOBRE LAS TRANSACCIONES Y EL USO NO SE UTILIZARÁ PARA COMPENSAR NINGÚN GASTO DE INGRESOS CORRIENTE DEL FONDO GENERAL; Y LOS FONDOS PROVENIENTES DEL AUMENTO DE ESTOS IMPUESTOS DEBERÍAN SER COBRADOS Y GASTADOS EN CADA AÑO FISCAL POR DENVER SIN TENER EN CUENTA CUALQUIER GASTO, RECAUDACIÓN DE INGRESOS U OTRA LIMITACIÓN INCLUIDA EN EL ARTÍCULO X, SECCIÓN 20 DE LA CONSTITUCIÓN DE COLORADO O CUALQUIER OTRA LEY?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "3936d020",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "0d9bf288",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "f8ea6f22",
+          "Name": "Ballot Measure 2C",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the Charter of the City and County of Denver be amended to give City Council the authority to procure for professional services without executive branch approval?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se deberían enmendar los Estatutos de la Ciudad y el Condado de Denver para otorgar al ayuntamiento la autoridad para contratar servicios profesionales sin la aprobación del poder ejecutivo?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "624eaaac",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "570837c1",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "b458ad4c",
+          "Name": "Ballot Measure 2D",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the Charter of the City and County of Denver be amended to create the Board of Transportation and Infrastructure to advise the Manager with respect to the policy and operation of the Department and shall review and comment on the proposed annual budget for the Department?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se deberían enmendar los Estatutos de la Ciudad y el Condado de Denver para crear la Junta de Transporte e Infraestructura para asesorar al administrador con respecto a la política y operación del Departamento y debería revisarse y comentarse el presupuesto anual propuesto para el Departamento?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "c84cc5d8",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "9e584f76",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "1dcdef1c",
+          "Name": "Ballot Measure 2E",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the Charter of the City and County of Denver be amended to give City Council authority to consent to certain mayoral appointments?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se deberían enmendar los Estatutos de la Ciudad y el Condado de Denver para otorgar autoridad al ayuntamiento para autorizar ciertas designaciones de alcaldes?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "3b609b71",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "66fbab3e",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "8003b50a",
+          "Name": "Ballot Measure 2F",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall Article III, Part 3, of the Charter of the City and County of Denver be updated to remove outdated language and allow for modernization of the conduct of city business?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se debería actualizar el Artículo III, Parte 3, de los Estatutos de la Ciudad y el Condado de Denver para eliminar los términos obsoletos y permitir la modernización de la administración de los negocios de la ciudad?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "427f8a2b",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "c310ae49",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "fbe76ba7",
+          "Name": "Ballot Measure 2G",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the Charter of the City and County of Denver be amended to give the city council authority to initiate a supplemental appropriation or transfer, following consultation with the Manager of Finance?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se deberían enmendar los Estatutos de la Ciudad y el Condado de Denver para otorgar autorizar al ayuntamiento a iniciar una apropiación o transferencia complementaria, luego de consultar al administrador de finanzas?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "25f46f41",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "6c71663f",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "2c72824f",
+          "Name": "Ballot Measure 2H",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the City and County of Denver, without increasing taxes by this measure, reestablish the city’s right to provide all services restricted since 2005 by the Colorado General Assembly with their passage of Senate Bill 05-152, including the authority but not obligation to provide high-speed Internet (advanced services), telecommunication services, and cable television services, including any new and improved high bandwidth services based on future technologies, to residents, businesses, schools, libraries, non-profit entities and other users of such services either directly or indirectly with public or private sector partners, as expressly permitted by Article 27, Title 29 of the Colorado Revised Statutes?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Deberían la Ciudad y el Condado de Denver, sin aumentar impuestos con esta medida, restablecer el derecho de la ciudad a proporcionar todos los servicios restringidos desde 2005 por la Asamblea General de Colorado con la aprobación de la Ley del Senado 05-152, incluida la autoridad pero no la obligación de proporcionar Internet de alta velocidad (servicios avanzados), servicios de telecomunicaciones y servicios de televisión por cable, incluido cualquier servicio nuevo y mejorado de banda ancha basado en futuras tecnologías, para residentes, negocios, escuelas, bibliotecas, entidades sin fines de lucro y otros usuarios de dichos servicios, ya sea directa o indirectamente con socios del sector público o privado, como lo autoriza expresamente el Artículo 27, Titulo 29 de los Estatutos Revisados de Colorado?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "b359788d",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "2d16c275",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "acc9bd59",
+          "Name": "Ballot Measure 2I",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the Charter of the City and County of Denver be amended to clarify that the Clerk and Recorder may appoint four at-will employees in addition to the Deputy, all of whom shall be exempt from the career service personnel system?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Se deberían enmendar los Estatutos de la Ciudad y el Condado de Denver para especificar que el secretario y registrador podrá designar a cuatro empleados a voluntad además del adjunto, quienes estarán exentos del sistema de personal de servicio de carrera?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "e8f003c3",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "ae6592a3",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "5c281dde",
+          "Name": "Ballot Measure 2J",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shall the voters for the City and County of Denver adopt an ordinance authorizing the city to grant a provisional permit to owners or keepers of a pit bull, provided the owner microchips the animal and complies with additional requirements set by Denver Animal Protection?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿Los votantes de la Ciudad y el Condado de Denver deberían adoptar una ordenanza que autorice a la ciudad a otorgar un permiso temporal a los propietarios o cuidadores de un perro de raza pit bull, siempre que el propietario coloque un microchip al animal y cumpla los requisitos adicionales establecidos por Protección Animal de Denver?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "620b97f0",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "f7b64228",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "3b287a8c",
+          "Name": "Ballot Measure 4A",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "SHALL DENVER PUBLIC SCHOOLS TAXES BE INCREASED UP TO $32 MILLION IN TAX COLLECTION YEAR 2021 AND BY THE AMOUNTS IN ANY YEAR THEREAFTER AS ARE RAISED FROM A MILL LEVY OF UP TO 4 MILLS PURSUANT TO AND IN ACCORDANCE WITH SECTION 22-54-108.7, C.R.S., PROVIDED THAT THE MILL LEVY FOR THE FIRST YEAR SHALL NOT EXCEED 1.55 MILLS AND NO MILL LEVY INCREASE FROM YEAR TO YEAR SHALL EXCEED 1 MILL, WITH THE EFFECT THAT MORE GENERAL FUND REVENUES WILL BE AVAILABLE FOR PURPOSES SUCH AS: · ADDING AND MAINTAINING MENTAL HEALTH PROFESSIONALS AND SCHOOL COUNSELORS TO SUPPORT STUDENTS; · ADDING AND MAINTAINING SCHOOL NURSES TO SUPPORT COVID-19 MONITORING AND PREVENTION AS WELL AS OTHER HEALTH EDUCATION; · INCREASING MINIMUM WAGES FOR SCHOOL SUPPORT STAFF; AND · ADDING COST OF LIVING FUNDS TO PAY EDUCATORS A LIVING WAGE; AND SHALL SUCH ADDITIONAL REVENUES FROM THIS TAX INCREASE BE DEPOSITED INTO THE SUPPLEMENTAL CAPITAL CONSTRUCTION, TECHNOLOGY AND MAINTENANCE FUND AND USED FOR ONGOING CASH FUNDING FOR CAPITAL CONSTRUCTION, NEW INSTRUCTIONAL TECHNOLOGY, EXISTING TECHNOLOGY UPGRADES, AND MAINTENANCE NEEDS OF THE DISTRICT; AND SHALL THE DISTRICT BE AUTHORIZED TO INCREASE SUCH MILL LEVY BEGINNING IN TAX COLLECTION YEAR 2022 AND ANNUALLY THEREAFTER TO OFFSET PROPERTY TAX REFUNDS OR ABATEMENTS OR REDUCTIONS IN THE PERCENTAGE OF ACTUAL VALUATION USED TO DETERMINE ASSESSED VALUATION; AND SHALL DENVER PUBLIC SCHOOLS PUBLISH AN ANNUAL REPORT ON THE EXPENDITURES OF THESE FREED UP GENERAL FUNDS?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "¿SE DEBERÍAN AUMENTAR LOS IMPUESTOS DE LAS ESCUELAS PÚBLICAS DE DENVER EN HASTA $32 MILLONES EN LA RECAUDACIÓN DE IMPUESTOS DEL AÑO 2021 Y POR LAS CANTIDADES QUE EN CUALQUIER AÑO SUBSIGUIENTE SE AUMENTEN DE UN IMPUESTO SOBRE BIENES INMUEBLES DE HASTA 4 MILÉSIMAS DE CONFORMIDAD CON LA SECCIÓN 22-54-108.7, ESTATUTOS REVISADOS DE COLORADO (COLORADO REVISED STATUTES, CRS), CONSIDERANDO QUE EL IMPUESTO SOBRE BIENES INMUEBLES NO EXCEDERÁ LAS 1.55 MILÉSIMAS Y NINGÚN AUMENTO DEL IMPUESTO SOBRE BIENES INMUEBLES DE AÑO A AÑO EXCEDERÁ 1 MILÉSIMA, CON EL EFECTO DE QUE MÁS INGRESOS DEL FONDO GENERAL ESTARÁN DISPONIBLES PARA FINES COMO: · AGREGAR Y MANTENER PROFESIONALES DE LA SALUD MENTAL Y CONSEJEROS ESCOLARES PARA APOYAR A LOS ESTUDIANTES; · AGREGAR Y MANTENER ENFERMEROS ESCOLARES PARA APOYAR EL MONITOREO Y LA PREVENCIÓN DEL COVID-19 ASÍ COMO CUALQUIER OTRA EDUCACIÓN PARA LA SALUD; · AUMENTAR LOS SALARIOS MÍNIMOS DEL PERSONAL DE APOYO ESCOLAR; E · INCORPORAR LOS FONDOS DEL COSTO DE VIDA PARA PAGAR A LOS EDUCADORES UN SALARIO DIGNO; Y ¿SE DEBERÍAN DEPOSITAR DICHOS INGRESOS ADICIONALES PROVENIENTES DEL AUMENTO DE ESTE IMPUESTOS EN EL FONDO COMPLEMENTARIO DE CONSTRUCCIÓN DE OBRAS DE INFRAESTRUCTURA, TECNOLOGÍA Y MANTENIMIENTO Y SER USADOS PARA FINANCIAMIENTO EN EFECTIVO CONTINUO PARA CONSTRUCCIÓN DE OBRAS DE INFRAESTRUCTURA, NUEVA TECNOLOGÍA EDUCATIVA, ACTUALIZACIONES DE TECNOLOGÍAS EXISTENTES Y NECESIDADES DE MANTENIMIENTO DEL DISTRITO; Y SE DEBERÍA AUTORIZAR AL DISTRITO A AUMENTAR DICHO IMPUESTO SOBRE BIENES INMUEBLES A PARTIR DEL EJERCICIO FISCAL DE 2022 Y DESPUÉS ANUALMENTE PARA COMPENSAR LOS REEMBOLSOS O LAS DISMINUCIONES O REDUCCIONES DE IMPUESTOS SOBRE LA PROPIEDAD EN EL PORCENTAJE DE LA VALUACIÓN ACTUAL UTILIZADA PARA DETERMINAR LA VALUACIÓN EXAMINADA; Y DEBERÍAN LAS ESCUELAS PÚBLICAS DE DENVER PUBLICAR UN INFORME ANUAL SOBRE LOS GASTOS DE ESTOS FONDOS GENERALES LIBERADOS?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "8b2ef55a",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "a75f6c8b",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "ElectionResults.BallotMeasureContest",
+          "@id": "78e7ae89",
+          "Name": "Ballot Measure 4B",
+          "ElectionDistrictId": "8116a0ca",
+          "FullText": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "WITHOUT IMPOSING ANY NEW TAX, SHALL DENVER PUBLIC SCHOOLS DEBT BE INCREASED $795 MILLION, WITH A MAXIMUM REPAYMENT COST OF NOT MORE THAN $1,500 MILLION FOR THE PURPOSES OF: · MAINTAINING AND RENOVATING EXISTING SCHOOL BUILDINGS BY REPLACING LEAKING ROOFS, MAKING CRITICAL REPAIRS AND ADDRESSING STRUCTURAL PROBLEMS; · PROVIDING COOLING SYSTEMS FOR HIGH TEMPERATURE CLASSROOMS AND SCHOOLS THAT LACK AIR CONDITIONING; · ADDING NEW SCHOOLS AND ADDITIONAL CLASSROOMS AND MAKING IMPROVEMENTS TO EXISTING SCHOOLS TO ADDRESS OVERCROWDING AND REDUCE CLASS SIZES; · PURCHASING ADDITIONAL COMPUTERS SO THAT STUDENTS HAVE ACCESS TO TECHNOLOGY THEY NEED DURING THE COVID-19 PANDEMIC AND THEREAFTER; · IMPROVING LEARNING ENVIRONMENTS IN OLDER SCHOOL BUILDINGS BY UPGRADING SCIENCE AND COMPUTER LABS AND MODERNIZING CLASSROOM INSTRUCTIONAL TECHNOLOGY; · IMPROVING STUDENT SAFETY IN SCHOOL BUILDINGS AND IMPROVING SECURITY AT SCHOOL ENTRYWAYS; · IMPROVING AND EXPANDING EARLY CHILDHOOD LEARNING ENVIRONMENTS; AND OTHER CAPITAL IMPROVEMENTS; AND SHALL THE TAXES AUTHORIZED AT THE DISTRICT’S BOND ELECTIONS IN 1998, 2003, 2008, 2012, AND 2016 BE EXTENDED AND AUTHORIZED TO BE USED TO PAY THE DEBT AUTHORIZED AT THIS ELECTION IN ADDITION TO THE DEBT AUTHORIZED AT SUCH PRIOR ELECTIONS; SHALL THE MILL LEVY BE INCREASED IN ANY YEAR, WITHOUT LIMITATION OF RATE BUT ONLY IN AN AMOUNT SUFFICIENT TO PAY THE PRINCIPAL OF, PREMIUM, IF ANY, AND INTEREST ON SUCH DEBT OR ANY REFUNDING DEBT (OR TO CREATE A RESERVE FOR SUCH PAYMENT); AND MAY SUCH DEBT BE EVIDENCED BY THE ISSUANCE OF GENERAL OBLIGATION BONDS OR OTHER MULTIPLE FISCAL YEAR OBLIGATIONS THAT BE SOLD IN ONE SERIES OR MORE, FOR A PRICE ABOVE OR BELOW THE PRINCIPAL AMOUNT THEREOF, ON TERMS AND CONDITIONS, AND WITH SUCH MATURITIES AS PERMITTED BY LAW AND AS THE DISTRICT MAY DETERMINE?",
+                "Language": "en"
+              },
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "SIN GRAVAR NINGÚN NUEVO IMPUESTO, ¿SE DEBERÍA AUMENTAR LA DEUDA DE LAS ESCUELAS PÚBLICAS DE DENVER EN $795 MILLONES, CON UN COSTO MÁXIMO DE REEMBOLSO DE NO MÁS DE $1,500 MILLONES CON EL PROPÓSITO DE: · MANTENER Y RENOVAR LOS EDIFICIOS ESCOLARES EXISTENTES REEMPLAZANDO LOS TECHOS CON GOTERAS, HACIENDO REPARACIONES URGENTES Y ABORDANDO PROBLEMAS ESTRUCTURALES; · PROPORCIONAR SISTEMAS DE REFRIGERACIÓN PARA AULAS DE ALTA TEMPERATURA Y ESCUELAS SIN AIRE ACONDICIONADO; · AÑADIR ESCUELAS NUEVAS Y AULAS ADICIONALES Y HACER MEJORAS EN LAS ESCUELAS EXISTENTES PARA COMBATIR EL HACINAMIENTO Y REDUCIR EL TAMAÑO DE LAS CLASES; · COMPRAR COMPUTADORAS ADICIONALES PARA QUE LOS ESTUDIANTES TENGAN ACCESO A LA TECNOLOGÍA QUE NECESITAN DURANTE LA PANDEMIA DEL COVID-19 Y PARA EL FUTURO; · MEJORAR LOS ENTORNOS DE APRENDIZAJE EN EDIFICIOS ESCOLARES ANTIGUOS MEJORANDO LOS LABORATORIOS DE CIENCIAS Y COMPUTACIÓN Y MODERNIZANDO LA TECNOLOGÍA EDUCATIVA EN EL AULA; · MEJORAR LA SEGURIDAD DE LOS ESTUDIANTES EN LOS EDIFICIOS ESCOLARES Y MEJORAR LA SEGURIDAD EN LAS ENTRADAS DE LAS ESCUELAS; · MEJORAR Y AMPLIAR LOS AMBIENTES DE APRENDIZAJE EN LA PRIMERA INFANCIA; Y OTRAS MEJORAS MATERIALES; ¿Y SE DEBERÍAN EXTENDER LOS IMPUESTOS AUTORIZADOS EN LAS ELECCIONES DE BONOS DEL DISTRITO EN 1998, 2003, 2008, 2012 y 2016 Y SER USADOS PARA PAGAR LA DEUDA AUTORIZADA EN ESTA ELECCIÓN, ADEMÁS DE LA DEUDA AUTORIZADA EN LAS ELECCIONES PREVIAS?; ¿SE DEBERÍA AUMENTAR EL IMPUESTO SOBRE BIENES INMUEBLES EN CUALQUIER AÑO, SIN LIMITACIÓN DE LA TASA, PERO SOLO EN UNA CANTIDAD SUFICIENTE PARA PAGAR EL CAPITAL DE LA PRIMA, DE HABERLA, Y EL INTERÉS SOBRE DICHA DEUDA O CUALQUIER DEUDA DE REEMBOLSO (O PARA CREAR UNA RESERVA PARA DICHO PAGO); Y SE PODRÁ ACREDITAR DICHA DEUDA POR MEDIO DE LA EMISIÓN DE BONOS DE OBLIGACIÓN GENERAL U OTRAS OBLIGACIONES MÚLTIPLES DE EJERCICIO FISCAL QUE SE VENDAN EN UNA SERIE O MÁS, POR UN PRECIO SUPERIOR O INFERIOR AL IMPORTE DEL CAPITAL DE LOS MISMOS, EN LOS TÉRMINOS Y CONDICIONES Y CON LOS VENCIMIENTOS QUE LA LEY PERMITA Y EN LA FORMA QUE DETERMINE EL DISTRITO?",
+                "Language": "es"
+              }
+            ]
+          },
+          "VoteVariation": "n-of-m",
+          "ContestSelection": [
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "73fc233f",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Yes/For",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "Sí/en Favor de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "ElectionResults.BallotMeasureSelection",
+              "@id": "a0cb5f6c",
+              "Selection": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/Against",
+                    "Language": "en"
+                  },
+                  {
+                    "@type": "ElectionResults.LanguageString",
+                    "Content": "No/en Contra de",
+                    "Language": "es"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "Candidate": [
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "ab729395",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Joseph R. Biden / Kamala D. Harris",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "967e43a0",
+          "PartyId": "76ba931e",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Donald J. Trump / Michael R. Pence",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "6417c88c",
+          "PartyId": "d07d479f",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Don Blankenship / William Mohr",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "77ada04e",
+          "PartyId": "d3e46644",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Bill Hammons / Eric Bodenstab",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "0c5dee1e",
+          "PartyId": "b7fce473",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Howie Hawkins / Angela Nicole Walker",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "1b46cfb8",
+          "PartyId": "e7c47f72",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Blake Huber / Frank Atwood",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "36bc5cb5",
+          "PartyId": "cffe6e89",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Jo Jorgensen / Jeremy \"Spike\" Cohen",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "4564301b",
+          "PartyId": "7074e7a9",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Brian Carroll / Amar Patel",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "0b52ab3a",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Mark Charles / Adrian Wallace",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "153a9292",
+          "PartyId": "78737bdd",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Phil Collins / Billy Joe Parker",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "2870775a",
+          "PartyId": "1650d398",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Roque \"Rocky\" De La Fuente / Darcy G. Richardson",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "1ed6ca12",
+          "PartyId": "2e326e8b",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Dario Hunter / Dawn Neptune Adams",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "72c7e489",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Princess Khadijah Maryam Jacob-Fambro / Khadijah Maryam Jacob Sr.",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "5ae5be92",
+          "PartyId": "e46a2902",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Alyson Kennedy / Malcolm Jarrett",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "09b2725b",
+          "PartyId": "050c26ea",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Joseph Kishore / Norissa Santa Cruz",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "098b6d4c",
+          "PartyId": "75bfc046",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Kyle Kenley Kopitke / Nathan Re Vo Sorenson",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "e4797118",
+          "PartyId": "8270f902",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Glorial La Riva / Sunil Freeman",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "2cf94ff0",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Joe McHugh / Elizabeth Storm",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "6172a592",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Brock Pierce / Karla Ballard",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "bb5e94dd",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Jordan \"Cancer\" Scott / Jennifer Tepool",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "43df9732",
+          "PartyId": "",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Kanye West / Michelle Tidball",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "2d14b231",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "John W. Hickenlooper",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "0b6b5c22",
+          "PartyId": "76ba931e",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Cory Gardner",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "d8747749",
+          "PartyId": "e7c47f72",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Daniel Doyle",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "382f3020",
+          "PartyId": "d3e46644",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Stephan \"Seku\" Evans",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "e2fe60b2",
+          "PartyId": "cffe6e89",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Raymon Anthony Doane",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "fbd037cd",
+          "PartyId": "76ba931e",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Shane Bolling",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "6a90a22c",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Diana DeGette",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "33efcb24",
+          "PartyId": "d3e46644",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Paul Noel Fiorino",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "ab37cbb9",
+          "PartyId": "e7c47f72",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Jan Kok",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "9ca31cdf",
+          "PartyId": "cffe6e89",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Kyle Furey",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "12855964",
+          "PartyId": "76ba931e",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Sydnnia Wulff",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "113a9cbe",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Lisa Escárcega",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "d6c9b447",
+          "PartyId": "e7c47f72",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Zachary Laddison",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "0515b33c",
+          "PartyId": "cffe6e89",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Alan Hayman",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "349b43b5",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Susan Lontine",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "3fd75b98",
+          "PartyId": "76ba931e",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Samantha Koch",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "2f0470d0",
+          "PartyId": "424a826c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Beth McCann",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "f4b0b13c",
+          "PartyId": "f4b0b13c",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "William F. Robinson III",
+                "Language": "en"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "Party": [
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "424a826c",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Label": "Democratic",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Democratic",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Demócrata",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "DEM",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "76ba931e",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Republican",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Republicano",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "REP",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "d07d479f",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "American Constitution",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Constitución Americana",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "AMC",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "d3e46644",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Unity",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Unidad",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "UNI",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "b7fce473",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Green",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "verde",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "GRN",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "e7c47f72",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Approval Voting",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Voto Aprobatorio",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "APV",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "cffe6e89",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Libertarian",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Libertario",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "LIB",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "7074e7a9",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "American Solidarity",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "American Solidarity",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "AMS",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "78737bdd",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Prohibition",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Prohibición",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "PRH",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "1650d398",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Alliance",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Alianza",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "ALC",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "2e326e8b",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Progressive",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Progresista",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "PRG",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "e46a2902",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Socialist Workers",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Socialist Tabajadores",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "SCW",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "050c26ea",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Socialist Equality",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Igualdad Socialista",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "SCE",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "75bfc046",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Independent American",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Independiente Americano",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "IDA",
+            "Language": "en"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Party",
+      "@id": "8270f902",
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Socialism and Liberation",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Socialistmo y Liberación",
+            "Language": "es"
+          }
+        ]
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "SYL",
+            "Language": "en"
+          }
+        ]
+      }
+    }
+  ],
+  "Office": [
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "c937ab5e",
+      "IsPartisan": true,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Executive Office of the President",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Oficina Ejecutiva del Presidente",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "f92e5c77",
+      "IsPartisan": true,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "United States Senate",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Senado de los Estados Unidos",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "9dc07fc0",
+      "IsPartisan": true,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "117th United States Congress",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "117° Congreso de los Estados Unidos",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "078b020f",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "State Board of Education - Congressional District 1",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Junta de Educación del Estado - Distrito 1 del Congresso",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "241bd8ff",
+      "IsPartisan": true,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "State Representative - District 1",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Representante del Estado - Distrito 1",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "82b045d5",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "District Attorney - 2nd Judicial District",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Fiscal de Distrito - Distrito Judicial 2",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "6649b4c6",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Colorado Supreme Court Justice",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Suprema Corte de Justicia de Colorado",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "776a16ab",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Court of Appeals",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Tribunal de Apelaciones",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "717383bd",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "District Court Judge",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Juez del Tribunal del Distrito",
+            "Language": "es"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ElectionResults.Office",
+      "@id": "903e6fc1",
+      "IsPartisan": false,
+      "Name": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "County Court Judge",
+            "Language": "en"
+          },
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "Juez del Tribunal del Condado",
+            "Language": "es"
+          }
+        ]
+      }
+    }
+  ],
+  "Person": [
+
+  ],
+  "GpUnit": [
+    {
+      "Type": "country",
+      "@type": "ElectionResults.ReportingUnit",
+      "@id": "e06391d6",
+      "ComposingGpUnitIds": [
+        "8116a0ca"
+      ],
+      "Name": {
+        "Text": [
+          {
+            "Content": "United States of America",
+            "Language": "en",
+            "Label": "USA",
+            "@type": "ElectionResults.LanguageString"
+          },
+          {
+            "Content": "Estados Unidos de America",
+            "Language": "es",
+            "Label": "EUA",
+            "@type": "ElectionResults.LanguageString"
+          }
+        ],
+        "@type": "ElectionResults.InternationalizedText"
+      }
+    },
+    {
+      "Type": "state",
+      "@type": "ElectionResults.ReportingUnit",
+      "@id": "8116a0ca",
+      "ComposingGpUnitIds": [
+        "4dac4917"
+      ],
+      "Name": {
+        "Text": [
+          {
+            "Content": "State of Colorado",
+            "Language": "en",
+            "Label": "Colorado",
+            "@type": "ElectionResults.LanguageString"
+          },
+          {
+            "Content": "Estado de Colorado",
+            "Language": "es",
+            "Label": "Colorado",
+            "@type": "ElectionResults.LanguageString"
+          }
+        ],
+        "@type": "ElectionResults.InternationalizedText"
+      }
+    },
+    {
+      "Type": "precinct",
+      "@type": "ElectionResults.ReportingUnit",
+      "@id": "4dac4917",
+      "ComposingGpUnitIds": [ ],
+      "Name": {
+        "Text": [
+          {
+            "Content": "Denver County",
+            "Language": "en",
+            "Label": "Denver",
+            "@type": "ElectionResults.LanguageString"
+          },
+          {
+            "Content": "Condado de Denver",
+            "Language": "es",
+            "Label": "Denver",
+            "@type": "ElectionResults.LanguageString"
+          }
+        ],
+        "@type": "ElectionResults.InternationalizedText"
+      }
+    }
+  ]
+}

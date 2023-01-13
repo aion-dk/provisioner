@@ -26,7 +26,7 @@ services:
       - "3009:3009"
     depends_on:
       - "provisioner-db"
-      - "bucket"
+      - "upload-server"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "$PWD:$PWD"
@@ -49,14 +49,10 @@ services:
     ports:
       - "8000:8000"
 
-  bucket:
-    image: "halverneus/static-file-server:latest"
+  upload-server:
+    image: "mayth/simple-upload-server:latest"
     volumes:
-      - "./bucket:/usr/src/bucket"
+      - "./data/uploads:/usr/src/uploads"
     ports:
-      - "8081:8080"
-    environment:
-      FOLDER: "/usr/src/bucket"
-      CORS: "true"
-      DEBUG: "true"
-      HOST: ""
+      - "25478:25478"
+    command: "-cors -token f9403fc5f537b4ab332d /usr/src/uploads"

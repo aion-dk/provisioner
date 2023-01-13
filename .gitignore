@@ -9,3 +9,5 @@ notes/*
 .prettierignore
 v-deploy.sh
 data/
+
+uploads/*.*
