@@ -1,31 +1,36 @@
-const { Voter, Election, ApiResponse, ApiRequire } = require("/opt/Common");
+const {
+  Voter,
+  Election,
+  ApiResponse,
+  ApiRequire,
+  FileServer,
+} = require("/opt/Common");
+
+const setElectionVoters = async (election, voterList) => {
+  voterList.forEach((entry) => {
+    await Voter.create(
+      Object.assign(entry, { electionId: election.electionId })
+    )
+  })
+}
 
 exports.lambdaHandler = async (event, context, callback) => {
-  const requiredArgs = ["electionId"];
+  const requiredArgs = ["electionId", "voterList"];
   const messageBody = JSON.parse(event.body);
 
   if (!ApiRequire.hasRequiredArgs(requiredArgs, messageBody)) {
     return ApiResponse.makeRequiredArgumentsError();
   }
-
-  const { electionId } = messageBody;
-
-  if (
-    process.env.AWS_SAM_LOCAL ||
-    process.env.DEPLOYMENT_ENVIRONMENT.startsWith("development")
-  ) {
-    /*
-      Potential Easter Eggs here
-    */
-  }
+  const { electionId, voterList } = messageBody;
 
   if (electionId) {
-    //Update request
     const election = await Election.findByElectionId(electionId);
-    if (!election) {
-      return ApiResponse.noMatchingElection(electionId);
+
+    if (election) {
+      await setElectionVoters(election, voterList);
+      return ApiResponse.makeResponse(200);
     } else {
-      return ApiResponse.notImplementedResponse("setVoters");
+      return ApiResponse.noMatchingElection(electionId);
     }
   }
 };

@@ -485,9 +485,12 @@ export default function ElectionForm({
             if ((data as Election)?.electionId) {
               const resp = await setElectionVoters(
                 (data as Election).electionId,
-                []
+                file
               );
-              setData(resp);
+              if (resp) {
+                console.log("Got resp");
+                console.log(resp);
+              }
               return;
             }
           }}

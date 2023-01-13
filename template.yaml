@@ -829,7 +829,7 @@ Resources:
             TableName: !Sub "abc_files_${environment}"
         - S3CrudPolicy:
             BucketName: !Sub "abc-uploads-${environment}"
-  setVotersFunction:
+  setElectionVotersFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: endpoints/setVoters/
@@ -840,7 +840,7 @@ Resources:
           Type: Api
           Properties:
             RestApiId: !Ref AbcBackendApiGateway
-            Path: /setVoters
+            Path: /setElectionVoters
             Method: POST
       Policies:
         - DynamoDBCrudPolicy:

@@ -8,6 +8,7 @@ import {
 } from "types";
 import { VoterRecord } from "types/voter";
 import { get, post, uploadFile, SuccessResult, uploadFileNew } from "./base";
+import * as d3 from 'd3'
 
 const defaultElection = {
   electionId: "default-election",
@@ -139,20 +140,15 @@ export const setBallotDefinitions = async (
   );
 };
 
-export const setElectionVoters = async (
-  electionId: string,
-  voterRecords: Array<VoterRecord>
-) => {
+export const setElectionVoters = async (electionId: string, voterListFile: File) => {
+  const contents = await voterListFile.text()
+  const voterList = d3.csvParse(contents);
+
   return await post(
     `/setElectionVoters`,
     {
       electionId,
-      voterRecords,
-    },
-    {
-      defaultReturn: {
-        success: true,
-      },
+      voterList
     }
   );
 };

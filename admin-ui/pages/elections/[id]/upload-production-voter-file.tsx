@@ -23,13 +23,13 @@ import CompletedCheckbox from 'component/CompletedCheckbox';
 
 const UploadLiveVoterFile: NextPage = () => {
   const [election, setElection] = useState<Maybe<Election>>(null)
-  
+
   const router = useRouter();
   const { query } = router;
   const { id } = query;
 
   const electionId = Array.isArray(id) ? id[0] : id;
-  
+
 
   useEffect(()=> {
     const loadElection = async () => {
@@ -42,7 +42,7 @@ const UploadLiveVoterFile: NextPage = () => {
       loadElection();
     }
   }, [electionId])
-  
+
 
   console.log(election)
 
