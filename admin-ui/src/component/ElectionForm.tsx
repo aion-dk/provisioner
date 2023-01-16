@@ -35,7 +35,6 @@ import {
   setElectionDefinition,
   setElectionVoters,
   setBallotDefinitions,
-  getElectionDefinitionStatus,
 } from "requests/election";
 import { useRouter } from "next/router";
 import InputSwitch from "./InputSwitch";
@@ -76,19 +75,6 @@ export default function ElectionForm({
     "Production Voter Data",
     "Review",
   ];
-
-  const getEDFStatus = async () => {
-    if (edfUid) {
-      const resp = await getElectionDefinitionStatus(edfUid);
-      setEDFStatus(resp);
-    }
-  };
-
-  useEffect(() => {
-    if (edfUid) {
-      getEDFStatus();
-    }
-  }, [edfUid]);
 
   const handleConfigurationChange = (name: string, value: any) => {
     const newData = { ...(data || {}) } as { [x: string]: any };
@@ -410,7 +396,7 @@ export default function ElectionForm({
             console.log('Hey')
             console.log(data)
             if ((data as Election)?.electionId) {
-              // setEDFStatus({ status: "uploading" });
+              setEDFStatus({ status: "uploading" });
               console.log("Uploading..");
               console.log("ElectionId: " + (data as Election).electionId);
               const resp = await setElectionDefinition(
@@ -421,6 +407,7 @@ export default function ElectionForm({
               if (resp) {
                 console.log("Got resp");
                 console.log(resp);
+                setEDFStatus(resp);
                 setEDFUid(resp.uuid);
               }
               return;
@@ -438,10 +425,9 @@ export default function ElectionForm({
               <Loading />
             </Box>
           )}
-          {edfStatus.status === "started" && (
+          {edfStatus.status === "complete" && (
             <Box>
-              EDF File Uploaded {formatTimeStamp(new Date(edfStatus.started))}{" "}
-              Processing <Loading />
+              Uploaded on { Date() }
             </Box>
           )}
         </Box>

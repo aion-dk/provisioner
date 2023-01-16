@@ -2,60 +2,65 @@ const {
   Election,
   ApiResponse,
   ApiRequire,
-  DocumentInterface,
+  FileServer,
+  FileInProcessing,
 } = require("/opt/Common");
 
 exports.lambdaHandler = async (event, context, callback) => {
-  const requiredArgs = ["electionId", "objectId"];
+  console.log('Inside lambda handler')
+  let initialStatus = "started",
+    errorMsg = "";
+  const requiredArgs = ["electionId", "EDFFile"];
   const messageBody = JSON.parse(event.body);
 
   if (!ApiRequire.hasRequiredArgs(requiredArgs, messageBody)) {
     return ApiResponse.makeRequiredArgumentsError();
   }
 
-  const { electionId, objectId } = messageBody;
-
-  if (
-    process.env.AWS_SAM_LOCAL ||
-    process.env.DEPLOYMENT_ENVIRONMENT.startsWith("development")
-  ) {
-    /*
-      Potential Easter Eggs here
-    */
-  }
+  const { electionId, EDFFile } = messageBody;
+  console.debug("Election ID: " + electionId);
 
   //Update request
+  console.debug("Finding election:");
   const election = await Election.findByElectionId(electionId);
+  console.debug("Got election:");
+  console.debug(election);
   if (!election) {
     return ApiResponse.noMatchingElection(electionId);
   } else {
-    //New model: work with previously uploaded files
+    console.debug("Initiating EDF Submission...");
+    const [success, message] = await election.initiateEDFSubmission(
+      EDFFile,
+      initialStatus,
+      errorMsg
+    );
+    console.debug("Success: " + success);
+    console.debug("Message: " + message);
 
-    const documentState = await DocumentInterface.getDocumentState(objectId);
-    if (!documentState) {
-      return ApiResponse.makeFullErrorResponse(
-        "file-error",
-        "File not found: " + objectId
-      );
+    const electionDefinitionURL = FileServer.genUrl(EDFFile);
+    console.debug(
+      "Updating election: " +
+        electionId +
+        " with EDF URL: " +
+        electionDefinitionURL
+    );
+
+    await election.update({
+      electionDefinitionFile: EDFFile,
+      electionDefinitionURL,
+    });
+
+    console.debug("Done updating election...");
+
+    if (success) {
+      return ApiResponse.makeResponse(200, {
+        status: "complete",
+        uuid: EDFFile,
+      });
     } else {
-      if (documentState.status === "ready") {
-        const [success, message] = await election.setElectionDefinition(
-          objectId,
-          documentState
-        );
-        if (success) {
-          return ApiResponse.makeResponse(200, {
-            objectKey: electionId + "_edf.json",
-          });
-        } else {
-          return ApiResponse.makeFullErrorResponse("file-error", message);
-        }
-      } else {
-        return ApiResponse.makeFullErrorResponse(
-          "file-error",
-          "File not ready: " + objectId
-        );
-      }
+      return ApiResponse.makeErrorResponse(message);
     }
   }
+
+  return ApiResponse.makeResponse(200, { uuid: "mock-uuid" });
 };

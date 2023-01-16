@@ -187,33 +187,6 @@ export const setElectionVoters = async (electionId: string, voterListFile: File)
   );
 };
 
-export const setElectionDefinition = async (electionId: string, EDF: File) => {
-  const defaultElectionData = { ...defaultElection, electionDefinition: EDF };
-
-  const fileName = await uploadFile(
-    `/setElectionDefinition`,
-    EDF,
-    {
-      electionId,
-    },
-    { defaultReturn: defaultElectionData }
-  );
-
-  await sleep(2000);
-
-  const result = await post(
-    `/setElectionDefinition`,
-    {
-      electionId,
-      objectId: fileName,
-    },
-    { defaultReturn: defaultElectionData }
-  );
-
-  return {
-    objectKey: fileName,
-  };
-};
 
 export const openElectionTest = async (electionId: string) => {
   return await post("/openElectionTest", { electionId });
