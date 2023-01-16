@@ -15,7 +15,7 @@ exports.lambdaHandler = async (event, context, callback) => {
     return ApiResponse.makeRequiredArgumentsError();
   }
 
-  const { contentType, fileName } = messageBody;
+  let { contentType, fileName } = messageBody;
 
   const fileId = context.awsRequestId;
   if (!fileName) {
