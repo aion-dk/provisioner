@@ -25,10 +25,8 @@ import Loading from 'component/Loading';
 
 const UploadLiveVoterFile: NextPage = () => {
   const [election, setElection] = useState<Maybe<Election>>(null)
-  
   const [voterFileUid, setVoterFileUid] = useState<string>(election?.votersFile || "");
   const [voterFileStatus, setVoterFileStatus] = useState<{[x: string]: any}>(election?.votersFile ? {status: "started"}: {});
-
   const router = useRouter();
   const { query } = router;
   const { id } = query;
@@ -64,7 +62,7 @@ const UploadLiveVoterFile: NextPage = () => {
       loadElection();
     }
   }, [electionId])
-  
+
 
   return <LoggedInLayout title="Create Election">
     {election && <Grid container spacing={4}>

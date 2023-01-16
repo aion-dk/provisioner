@@ -7,7 +7,6 @@ const {
   FileServer,
 } = require("/opt/Common");
 
-// Main Lambda entry point
 exports.lambdaHandler = async (event, context, callback) => {
   const requiredArgs = ["contentType"];
   const messageBody = JSON.parse(event.body);

@@ -153,7 +153,6 @@ export const uploadFile = async (
   //   return fileName;
   // }
   // const { defaultReturn, headers } = optionalParams;
-
   // return await post(path, formData, {
   //   headers: {
   //     ...headers,

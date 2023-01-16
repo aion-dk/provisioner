@@ -10,6 +10,7 @@ import {
 } from "types";
 import { VoterRecord } from "types/voter";
 import { get, post, uploadFile, SuccessResult, uploadFileNew } from "./base";
+import * as d3 from 'd3'
 
 const defaultElection = {
   electionId: "default-election",
@@ -173,42 +174,35 @@ export const setBallotDefinitions = async (
   );
 };
 
-// Previous
-// export const setElectionVoters = async (
-//   electionId: string,
-//   voterRecords: Array<VoterRecord>
-// ) => {
-//   return await post(
-//     `/setElectionVoters`,
-//     {
-//       electionId,
-//       voterRecords,
-//     },
-//     {
-//       defaultReturn: {
-//         success: true,
-//       },
-//     }
-//   );
-// };
-
 // 2022-december-demo (previous implementation of setElectionVoters is kept above)
-export const setElectionVoters = async (electionId: string, EDF: File) => {
-  const fileName = await uploadFile(`/setElectionVoters`, EDF, {
-    electionId,
-  });
+export const setElectionVoters = async (electionId: string, voterListFile: File) => {
+  const contents = await voterListFile.text()
+  const voterList = d3.csvParse(contents);
 
-  await sleep(2000);
+  return await post(
+    `/setElectionVoters`,
+    {
+      electionId,
+      voterList
+    }
+  );
 
-  const result = await post(`/setElectionVoters`, {
-    electionId,
-    objectId: fileName,
-    latMode: false,
-  });
+  // 2022-december-demo update
+  // const fileName = await uploadFile(`/setElectionVoters`, voterListFile, {
+  //   electionId,
+  // });
 
-  return {
-    objectKey: fileName,
-  };
+  // await sleep(2000);
+
+  // const result = await post(`/setElectionVoters`, {
+  //   electionId,
+  //   objectId: fileName,
+  //   latMode: false,
+  // });
+
+  // return {
+  //   objectKey: fileName,
+  // };
 };
 
 export const setElectionDefinition = async (electionId: string, EDF: File) => {

@@ -32,11 +32,10 @@ import {
   createElection,
   getElection,
   setElectionConfigurations,
-  setElectionDefinition,
-  setElectionVoters,
-  setElectionBallots,
-  getFileStatus,
   submitElectionDefinition,
+  setElectionVoters,
+  setBallotDefinitions,
+  getElectionDefinitionStatus,
 } from "requests/election";
 import { useRouter } from "next/router";
 import InputSwitch from "./InputSwitch";
@@ -48,7 +47,6 @@ import GI from "./GI";
 import { Box } from "@mui/system";
 import Loading from "./Loading";
 import { formatTimeStamp } from "dsl/date";
-import InputEnumSelect from "./InputEnumSelect";
 
 interface ElectionFormProps {
   election: Maybe<Election>;
@@ -63,28 +61,10 @@ export default function ElectionForm({
 }: ElectionFormProps) {
   const [step, setStep] = useState<number>(0);
   const [data, setData] = useState<Maybe<Election | ElectionCreate>>(election);
-
   const [edfUid, setEDFUid] = useState<string>(
     election?.electionDefinitionFile || ""
   );
-  const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>(
-    election?.electionDefinitionFile ? { status: "started" } : {}
-  );
-
-  const [ballotsUid, setBallotsUid] = useState<string>(
-    election?.ballotsFile || ""
-  );
-  const [ballotsStatus, setBallotsStatus] = useState<{ [x: string]: any }>(
-    election?.ballotsFile ? { status: "started" } : {}
-  );
-
-  const [voterFileUid, setVoterFileUid] = useState<string>(
-    election?.votersFile || ""
-  );
-  const [voterFileStatus, setVoterFileStatus] = useState<{ [x: string]: any }>(
-    election?.votersFile ? { status: "started" } : {}
-  );
-
+  const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>({});
   const router = useRouter();
 
   const steps = [
@@ -98,31 +78,8 @@ export default function ElectionForm({
 
   const getEDFStatus = async () => {
     if (edfUid) {
-      const resp = await getFileStatus(edfUid);
-      if (resp.status === "complete") {
-        reloadElection();
-      }
+      const resp = await getElectionDefinitionStatus(edfUid);
       setEDFStatus(resp);
-    }
-  };
-
-  const getBallotsStatus = async () => {
-    if (ballotsUid) {
-      const resp = await getFileStatus(ballotsUid);
-      if (resp.status === "complete") {
-        reloadElection();
-      }
-      setBallotsStatus(resp);
-    }
-  };
-
-  const getVoterFileStatus = async () => {
-    if (voterFileUid) {
-      const resp = await getFileStatus(voterFileUid);
-      if (resp.status === "complete") {
-        reloadElection();
-      }
-      setVoterFileStatus(resp);
     }
   };
 
@@ -131,18 +88,6 @@ export default function ElectionForm({
       getEDFStatus();
     }
   }, [edfUid]);
-
-  useEffect(() => {
-    if (ballotsUid) {
-      getBallotsStatus();
-    }
-  }, [ballotsUid]);
-
-  useEffect(() => {
-    if (voterFileUid) {
-      getVoterFileStatus();
-    }
-  }, [voterFileUid]);
 
   const handleConfigurationChange = (name: string, value: any) => {
     const newData = { ...(data || {}) } as { [x: string]: any };
@@ -157,17 +102,12 @@ export default function ElectionForm({
     setData(newData as Election);
   };
 
-  const reloadElection = async () => {
-    if (election?.electionId) {
-      const updatedElection = await getElection(election?.electionId);
-      setData(updatedElection);
-    }
-  };
-
   const save = async () => {
     let updatedElection: Maybe<Election> = null;
     if ((data as Election)?.electionId) {
+      console.log(data);
       updatedElection = await setElectionAttributes(data as Election);
+      console.log(updatedElection);
     } else {
       updatedElection = await createElection(data as ElectionCreate);
     }
@@ -314,27 +254,6 @@ export default function ElectionForm({
             </InputSwitch>
           </GI>
           <GI>
-            <InputEnumSelect
-              value={data?.configurations?.affidavitWitnessRequirement}
-              onChange={(value: string) => {
-                handleConfigurationChange("affidavitWitnessRequirement", value);
-              }}
-              options={[
-                { value: "none", name: "None" },
-                { value: "name", name: "Name" },
-                { value: "nameSignature", name: "Name and Signature" },
-                { value: "nameAddress", name: "Name and Address" },
-                {
-                  value: "nameSignatureAddress",
-                  name: "Name Signature and Address",
-                },
-              ]}
-            >
-              Affidavit witness requirement
-            </InputEnumSelect>
-          </GI>
-
-          {/*<GI>
             <InputSwitch
               value={data?.configurations?.affidavitRequiresWitnessName}
               onChange={(value: boolean | null) => {
@@ -357,15 +276,17 @@ export default function ElectionForm({
                 );
               }}
             >
-              Affidavit requires witness signature
+              Afidavit requires witness signature
             </InputSwitch>
           </GI>
-            */}
           <Grid item>
             <InputSwitch
               value={data?.configurations?.multipleUsePermitted}
               onChange={(value: boolean | null) => {
-                handleConfigurationChange("multipleUsePermitted", value);
+                handleConfigurationChange(
+                  "affidavitRequiresWitnessSignature",
+                  value
+                );
               }}
             >
               Multiple Use Permitted
@@ -425,7 +346,6 @@ export default function ElectionForm({
       </Grid>
       <Grid item sm={6}>
         <Grid container spacing={2} direction="column">
-          {/*
           <Grid item>
             <Input
               data={data}
@@ -434,7 +354,6 @@ export default function ElectionForm({
               label="Election Definitions File Hostname"
             />
           </Grid>
-            */}
           <Grid item>
             <Input
               data={data?.configurations}
@@ -485,7 +404,6 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Upload Election Definition File</Typography>
         <FileUpload
-          key="edf-upload"
           onLoadFile={async (file) => {
             if ((data as Election)?.electionId) {
               // setEDFStatus({ status: "uploading" });
@@ -503,17 +421,6 @@ export default function ElectionForm({
               }
               return;
             }
-
-            // 2022-december-demo
-            // if ((data as Election)?.electionId) {
-            //   setEDFStatus({ status: "uploading" });
-            //   const resp = await setElectionDefinition(
-            //     (data as Election).electionId,
-            //     file
-            //   );
-            //   setEDFUid(resp.objectKey);
-            //   return;
-            // }
           }}
         />
         <Box sx={{ backgroundColor: "background.paper", padding: 2 }}>
@@ -529,7 +436,8 @@ export default function ElectionForm({
           )}
           {edfStatus.status === "started" && (
             <Box>
-              EDF File Processing <Loading />
+              EDF File Uploaded {formatTimeStamp(new Date(edfStatus.started))}{" "}
+              Processing <Loading />
             </Box>
           )}
         </Box>
@@ -537,52 +445,20 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Upload Ballot Files</Typography>
         <FileUpload
-          key="ballot-upload"
           onLoadFile={async (file) => {
             if ((data as Election)?.electionId) {
-              setBallotsStatus({ status: "uploading" });
-              const resp = await setElectionBallots(
+              const resp = await setBallotDefinitions(
                 (data as Election).electionId,
-                file
+                []
               );
-              setBallotsUid(resp.objectKey);
+              setData(resp);
               return;
             }
           }}
         />
-        <Box sx={{ backgroundColor: "background.paper", padding: 2 }}>
-          {ballotsStatus.status === "error" && (
-            <Box sx={{ color: "error.main" }}>
-              Error Processing File: {ballotsStatus.message}
-            </Box>
-          )}
-          {ballotsStatus.status === "uploading" && (
-            <Box sx={{ textAlign: "center" }}>
-              <Loading />
-            </Box>
-          )}
-          {ballotsStatus.status === "started" && (
-            <Box>
-              Ballot File Processing <Loading />
-            </Box>
-          )}
-        </Box>
       </Grid>
       <Grid item>
         <Typography variant="h3">Ballot checklist</Typography>
-        <Grid container spacing={2}>
-          {edfStatus.status === "complete" && (
-            <Grid item alignItems="center">
-              <CheckIcon color="success" /> <span>EDF File Uploaded</span>
-            </Grid>
-          )}
-          {ballotsStatus.status === "complete" && (
-            <Grid item alignItems="center">
-              <CheckIcon color="success" /> <span>Ballots Uploaded</span>
-            </Grid>
-          )}
-        </Grid>
-
         <CompletedCheckbox
           isComplete={(data as Election)?.ballotDefinitionCount > 0}
         >
@@ -605,55 +481,36 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Production Voter List</Typography>
         <FileUpload
-          key="prod-voter-upload"
           onLoadFile={async (file) => {
             if ((data as Election)?.electionId) {
-              setVoterFileStatus({ status: "uploading" });
               const resp = await setElectionVoters(
                 (data as Election).electionId,
                 file
               );
-              setVoterFileUid(resp.objectKey);
+              if (resp) {
+                console.log("Got resp");
+                console.log(resp);
+              }
               return;
             }
           }}
         />
-        <Box sx={{ backgroundColor: "background.paper", padding: 2 }}>
-          {voterFileStatus.status === "error" && (
-            <Box sx={{ color: "error.main" }}>
-              Error Processing File: {voterFileStatus.message}
-            </Box>
-          )}
-          {voterFileStatus.status === "uploading" && (
-            <Box sx={{ textAlign: "center" }}>
-              <Loading />
-            </Box>
-          )}
-          {voterFileStatus.status === "started" && (
-            <Box>
-              Voter File Processing <Loading />
-            </Box>
-          )}
-        </Box>
       </Grid>
       <Grid item sm={6}>
-        {/* <Typography variant="h3">Production Voter List Upload History</Typography>
-      <GC justifyContent="space-between">
-        <GI><Typography variant="subtitle2">Date</Typography></GI>
-        <GI>Action</GI>
-      </GC> */}
+        <Typography variant="h3">
+          Production Voter List Upload History
+        </Typography>
+        <GC justifyContent="space-between">
+          <GI>
+            <Typography variant="subtitle2">Date</Typography>
+          </GI>
+          <GI>Action</GI>
+        </GC>
       </Grid>
       <Grid item sm={6}>
         <Typography variant="h3">
           Production Voter List Upload Checklist
         </Typography>
-        <Grid container spacing={2}>
-          {voterFileStatus.status === "complete" && (
-            <Grid item alignItems="center">
-              <CheckIcon color="success" /> <span>Voter File Uploaded</span>
-            </Grid>
-          )}
-        </Grid>
         <CompletedCheckbox isComplete={(data as Election)?.voterCount > 0}>
           {(data as Election)?.voterCount || 0} voters uploaded
         </CompletedCheckbox>
@@ -680,47 +537,21 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Upload Test Voter List</Typography>
         <FileUpload
-          key="test-voter-upload"
           onLoadFile={async (file) => {
             if ((data as Election)?.electionId) {
-              setVoterFileStatus({ status: "uploading" });
               const resp = await setTestVoterFile(
                 (data as Election).electionId,
                 file
               );
-              setVoterFileUid(resp.objectKey);
+              setData(resp);
               return;
             }
           }}
         />
-        <Box sx={{ backgroundColor: "background.paper", padding: 2 }}>
-          {voterFileStatus.status === "error" && (
-            <Box sx={{ color: "error.main" }}>
-              Error Processing File: {voterFileStatus.message}
-            </Box>
-          )}
-          {voterFileStatus.status === "uploading" && (
-            <Box sx={{ textAlign: "center" }}>
-              <Loading />
-            </Box>
-          )}
-          {voterFileStatus.status === "started" && (
-            <Box>
-              Voter File Processing <Loading />
-            </Box>
-          )}
-        </Box>
       </Grid>
       <Grid item sm={6}></Grid>
       <Grid item sm={6}>
         <Typography variant="h3">Test Data Upload Checklist</Typography>
-        <Grid container spacing={2}>
-          {voterFileStatus.status === "complete" && (
-            <Grid item alignItems="center">
-              <CheckIcon color="success" /> <span>Voter File Uploaded</span>
-            </Grid>
-          )}
-        </Grid>
         <CompletedCheckbox isComplete={(data as Election)?.testVoterCount > 0}>
           {(data as Election)?.testVoterCount || 0} voters uploaded
         </CompletedCheckbox>

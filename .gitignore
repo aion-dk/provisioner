@@ -11,5 +11,4 @@ v-deploy.sh
 data/
 
 uploads/*.*
-
 .DS_Store

@@ -50,8 +50,8 @@ export type ElectionConfiguration = {
   multipleUseNotification: string;
   affidavitOfferSignatureViaPhoto: boolean;
   affidavitOfferSignatureViaName: boolean;
-  //affidavitRequiresWitnessName: boolean
-  //affidavitRequiresWitnessSignature: boolean
+  affidavitRequiresWitnessName: boolean
+  affidavitRequiresWitnessSignature: boolean
   affidavitWitnessRequirement: string;
   affidavitRequiresDLIDcardPhotos: boolean;
   DLNminLength: number;
