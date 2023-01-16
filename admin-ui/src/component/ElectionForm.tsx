@@ -70,6 +70,7 @@ export default function ElectionForm({
   console.log(data)
   const ballotCount = Object.keys((data as Election)?.ballotDefinitions)?.length || 0;
   console.log('Ballot count: ' + ballotCount)
+  console.log('Election definition count: ' + (data as Election)?.ballotDefinitionCount)
 
   const steps = [
     "Election Name",
@@ -397,8 +398,6 @@ export default function ElectionForm({
         <Typography variant="h3">Upload Election Definition File</Typography>
         <FileUpload
           onLoadFile={async (file) => {
-            console.log('Hey')
-            console.log(data)
             if ((data as Election)?.electionId) {
               setEDFStatus({ status: "uploading" });
               console.log("Uploading..");
