@@ -121,6 +121,16 @@ export const uploadFileNew = async (file: File) => {
   return fileName;
 };
 
+export const unzipFile = async (
+  key: string
+) => {
+  const resp = await post("/unzipProvisionedUpload", {
+    key,
+  });
+  console.log(resp)
+  return resp;
+}
+
 export const uploadFile = async (
   path: string,
   file: File,
@@ -143,6 +153,7 @@ export const uploadFile = async (
   //   return fileName;
   // }
   // const { defaultReturn, headers } = optionalParams;
+
   // return await post(path, formData, {
   //   headers: {
   //     ...headers,
@@ -151,6 +162,20 @@ export const uploadFile = async (
   //   },
   //   defaultReturn,
   // });
+
+  // 2022-december-demo
+  // const response = await axios.put(uploadUrl, file, {
+  //   headers: {
+  //     "Content-Type": file.type,
+  //   },
+  // });
+  // if (response) {
+  //   // start and wait for the unzip process
+  //   await unzipFile(fileName);
+  //   return fileName;
+  // }
+
+  // const { defaultReturn, headers } = optionalParams;
 };
 
 export interface SuccessResult {

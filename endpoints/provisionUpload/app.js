@@ -24,7 +24,12 @@ exports.lambdaHandler = async (event, context, callback) => {
   )}`;
 
   // // const uploadBucket = process.env.UPLOAD_BUCKET;
-  // // const uploadUrl = DocumentInterface.getSignedUploadUrl(uploadBucket,fileName, contentType);
+  // const uploadUrl = DocumentInterface.getSignedUploadUrl(
+  //   uploadBucket,
+  //   fileName,
+  //   contentType
+  // );
+  // await DocumentInterface.documentFileProvisioned(fileName);
 
   // // NOTE: Simple file server instead of AWS setup (above)
   const uploadUrl = FileServer.genUrl(fileName);
