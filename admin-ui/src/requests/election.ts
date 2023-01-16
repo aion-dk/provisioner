@@ -194,7 +194,6 @@ export const setElectionVoters = async (electionId: string, voterListFile: File)
   );
 };
 
-
 export const openElectionTest = async (electionId: string) => {
   return await post("/openElectionTest", { electionId });
 };

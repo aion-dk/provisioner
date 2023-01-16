@@ -7,7 +7,6 @@ const {
 } = require("/opt/Common");
 
 exports.lambdaHandler = async (event, context, callback) => {
-  console.log('Inside lambda handler')
   let initialStatus = "started",
     errorMsg = "";
   const requiredArgs = ["electionId", "EDFFile"];
@@ -18,34 +17,21 @@ exports.lambdaHandler = async (event, context, callback) => {
   }
 
   const { electionId, EDFFile } = messageBody;
-  console.debug("Election ID: " + electionId);
 
-  //Update request
-  console.debug("Finding election:");
   const election = await Election.findByElectionId(electionId);
-  console.debug("Got election:");
-  console.debug(election);
   if (!election) {
     return ApiResponse.noMatchingElection(electionId);
   } else {
-    console.debug("Initiating EDF Submission...");
     const [success, message] = await election.initiateEDFSubmission(
       EDFFile,
       initialStatus,
       errorMsg
     );
-    console.debug("Success: " + success);
-    console.debug("Message: " + message);
 
     const electionDefinitionURL = FileServer.genUrl(EDFFile);
-    console.debug(
-      "Updating election: " +
-        electionId +
-        " with EDF URL: " +
-        electionDefinitionURL
-    );
 
     await election.update({
+      edfSet: true,
       electionDefinitionFile: EDFFile,
       electionDefinitionURL,
     });
