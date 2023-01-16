@@ -7,6 +7,7 @@ const {
 } = require("/opt/Common");
 
 exports.lambdaHandler = async (event, context, callback) => {
+  console.log('Inside lambda handler')
   let initialStatus = "started",
     errorMsg = "";
   const requiredArgs = ["electionId", "EDFFile"];

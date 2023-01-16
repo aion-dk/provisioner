@@ -23,9 +23,13 @@ export default function ElectionCard({
 
   useEffect(() => {
     if (!election.configurations) {
-      const resp = getElection(election.electionId).then((resp) => {
-        setElection(resp);
-      });
+
+      // TODO: Temp remove this call
+      // const resp = getElection(election.electionId).then((resp) => {
+      // console.log('No configurations, got this in response:')
+      // console.log(resp)
+      //   setElection(resp);
+      // });
     }
   }, []);
 
@@ -131,6 +135,7 @@ export default function ElectionCard({
                     election.servingStatus === ElectionServingStatus.open
                   }
                   onClick={() => {
+                    console.log(election)
                     router.push(`/elections/${election.electionId}/edit`);
                   }}
                 >

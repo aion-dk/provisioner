@@ -30,10 +30,20 @@ const NewElection: NextPage = () => {
   useEffect(()=> {
     const loadElection = async () => {
       if (electionId) {
-        const resp = await getElection(electionId);
         // const configuration = await getConfigurations(electionId);
         // resp.configuration = configuration;
-        setElection(resp);
+
+        // TODO: Temp remove this call
+        // const resp = await getElection(electionId) as Election[];
+        // setElection(resp);
+        // @ts-ignore
+        const resp = await getElection(electionId) as Election[];
+        console.log('Got this list:')
+        console.log(resp)
+        const foundElection = resp?.find(x => x.electionId === electionId)
+        console.log('Found this election:')
+        console.log(foundElection)
+        setElection(foundElection);
       }
     }
     if (electionId) {

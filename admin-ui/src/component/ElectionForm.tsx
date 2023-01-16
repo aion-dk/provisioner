@@ -66,6 +66,7 @@ export default function ElectionForm({
   );
   const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>({});
   const router = useRouter();
+  console.log(data)
 
   const steps = [
     "Election Name",
@@ -104,6 +105,7 @@ export default function ElectionForm({
 
   const save = async () => {
     let updatedElection: Maybe<Election> = null;
+    console.log(data)
     if ((data as Election)?.electionId) {
       console.log(data);
       updatedElection = await setElectionAttributes(data as Election);
@@ -405,6 +407,8 @@ export default function ElectionForm({
         <Typography variant="h3">Upload Election Definition File</Typography>
         <FileUpload
           onLoadFile={async (file) => {
+            console.log('Hey')
+            console.log(data)
             if ((data as Election)?.electionId) {
               // setEDFStatus({ status: "uploading" });
               console.log("Uploading..");
