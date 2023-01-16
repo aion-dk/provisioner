@@ -154,7 +154,7 @@ export const getElectionDefinitionStatus = async (uuid: string) => {
   return await post(
     `/getElectionDefinitionStatus`,
     {
-      uuid,
+      objectId: uuid,
     },
     { defaultReturn: { success: true } }
   );

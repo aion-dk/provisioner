@@ -824,10 +824,12 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Sub "abc_files_${environment}"
 
-  setElectionDefinitionFunction:
+  # setElectionDefinitionFunction:
+  submitElectionDefinitionFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: endpoints/setElectionDefinition/
+      # CodeUri: endpoints/setElectionDefinition/
+      CodeUri: endpoints/submitElectionDefinition/
       Layers:
         - !Ref LibLayer
       Events:
@@ -835,7 +837,8 @@ Resources:
           Type: Api
           Properties:
             RestApiId: !Ref AbcBackendApiGateway
-            Path: /setElectionDefinition
+            # Path: /setElectionDefinition
+            Path: /submitElectionDefinition
             Method: POST
       Policies:
         - DynamoDBCrudPolicy:

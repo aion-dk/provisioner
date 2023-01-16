@@ -1,14 +1,17 @@
 const { Voter, Election, ApiResponse, ApiRequire } = require("/opt/Common");
 
 exports.lambdaHandler = async (event, context, callback) => {
+  console.log('Inside lambda!')
   const requiredArgs = ["electionId"];
   const messageBody = JSON.parse(event.body);
+  console.log(messageBody)
 
   if (!ApiRequire.hasRequiredArgs(requiredArgs, messageBody)) {
     return ApiResponse.makeRequiredArgumentsError();
   }
 
   const { electionId } = messageBody;
+  console.log(electionId)
 
   if (
     process.env.AWS_SAM_LOCAL ||
