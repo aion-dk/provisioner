@@ -66,11 +66,8 @@ export default function ElectionForm({
   );
   const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>({});
   const router = useRouter();
-  console.log('Inside electionform:')
   console.log(data)
-  const ballotCount = Object.keys((data as Election)?.ballotDefinitions)?.length || 0;
-  console.log('Ballot count: ' + ballotCount)
-  console.log('Election definition count: ' + (data as Election)?.ballotDefinitionCount)
+  const ballotCount = (data as Election)?.ballotFiles ? Object.keys((data as Election).ballotFiles).length : 0
 
   const steps = [
     "Election Name",
@@ -406,12 +403,17 @@ export default function ElectionForm({
                 (data as Election).electionId,
                 file
               );
-              console.log("Donerino");
               if (resp) {
                 console.log("Got resp");
                 console.log(resp);
                 setEDFStatus(resp);
                 setEDFUid(resp.uuid);
+
+                // TODO: Again weird that it returns an array... should probably be looked into
+                // @ts-ignore
+                const newElectionDataResp = await getElection((data as Election).electionId) as Election[]
+                const newData = newElectionDataResp.find(x => x.electionId === (data as Election).electionId)
+                setData(newData)
               }
               return;
             }
@@ -440,8 +442,6 @@ export default function ElectionForm({
         <FileUpload
           multiple={true}
           onLoadFile={async (file) => {
-            console.log('Got file')
-            console.log(file.name, file.size)
             if ((data as Election)?.electionId) {
               const resp = await setBallotDefinitions(
                 (data as Election).electionId,
@@ -456,9 +456,9 @@ export default function ElectionForm({
       <Grid item>
         <Typography variant="h3">Ballot checklist</Typography>
         <CompletedCheckbox
-          isComplete={(data as Election)?.ballotDefinitionCount > 0}
+          isComplete={(data as Election)?.electionDefinitionCount > 0}
         >
-          {(data as Election)?.ballotDefinitionCount || 0} ballot definitions
+          {(data as Election)?.electionDefinitionCount || 0} ballot definitions
           uploaded
         </CompletedCheckbox>
         <CompletedCheckbox isComplete={ballotCount > 0}>

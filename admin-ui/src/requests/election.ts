@@ -135,11 +135,24 @@ export const setElectionDefinition = async (
 
     const fileName = await uploadFileNew(EDF);
 
+    // BallotStyles count
+    const fileText = await EDF.text()
+    const fileJson = JSON.parse(fileText)
+    let ballotStyles = 0
+    const foundElectionsInDefinition = fileJson?.Election
+    if (foundElectionsInDefinition.length > 0) {
+      const ballotStyle = foundElectionsInDefinition[0].BallotStyle
+      if (ballotStyle) {
+        ballotStyles = ballotStyle.length
+      }
+    }
+
     const res = await post(
       `/setElectionDefinition`,
       {
         electionId,
         EDFFile: fileName,
+        ballotStyles
       },
       { defaultReturn: defaultElectionData }
     );

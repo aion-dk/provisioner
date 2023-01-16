@@ -36,6 +36,8 @@ const NewElection: NextPage = () => {
         // TODO: Temp remove this call
         // const resp = await getElection(electionId) as Election[];
         // setElection(resp);
+
+        // TODO: This is probably some consequence of another issue
         // @ts-ignore
         const resp = await getElection(electionId) as Election[];
         console.log('Got this list:')

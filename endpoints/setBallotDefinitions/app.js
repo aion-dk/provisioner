@@ -38,10 +38,6 @@ exports.lambdaHandler = async (event, context, callback) => {
     await election.updateBallotFiles({ [ballotFile]: ballotFileURL })
     console.log('Done updating ballot files!')
 
-    const ballotDefinitions = election.getBallotFiles();
-
-    return ApiResponse.makeResponse(200, {
-      ballotDefinitions
-    });
+    return ApiResponse.makeResponse(200, Election.filterConsumerProperties(election.attributes));
   }
 };
