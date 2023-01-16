@@ -32,7 +32,7 @@ import {
   createElection,
   getElection,
   setElectionConfigurations,
-  submitElectionDefinition,
+  setElectionDefinition,
   setElectionVoters,
   setBallotDefinitions,
   getElectionDefinitionStatus,
@@ -413,7 +413,7 @@ export default function ElectionForm({
               // setEDFStatus({ status: "uploading" });
               console.log("Uploading..");
               console.log("ElectionId: " + (data as Election).electionId);
-              const resp = await submitElectionDefinition(
+              const resp = await setElectionDefinition(
                 (data as Election).electionId,
                 file
               );

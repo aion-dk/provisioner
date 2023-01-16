@@ -126,7 +126,7 @@ export const setElectionConfigurations = async (
 };
 
 //ElectionDefinition
-export const submitElectionDefinition = async (
+export const setElectionDefinition = async (
   electionId: string,
   EDF: File
 ) => {
@@ -136,7 +136,7 @@ export const submitElectionDefinition = async (
     const fileName = await uploadFileNew(EDF);
 
     const res = await post(
-      `/submitElectionDefinition`,
+      `/setElectionDefinition`,
       {
         electionId,
         EDFFile: fileName,
