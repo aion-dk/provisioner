@@ -15,12 +15,14 @@ exports.lambdaHandler = async (event, context, callback) => {
     return ApiResponse.makeRequiredArgumentsError();
   }
 
-  const { contentType } = messageBody;
+  const { contentType, fileName } = messageBody;
 
   const fileId = context.awsRequestId;
-  const fileName = `${fileId}.${DocumentInterface.fileExtensionForContentType(
-    contentType
-  )}`;
+  if (!fileName) {
+    fileName = `${fileId}.${DocumentInterface.fileExtensionForContentType(
+      contentType
+    )}`;
+  }
 
   // // const uploadBucket = process.env.UPLOAD_BUCKET;
   // const uploadUrl = DocumentInterface.getSignedUploadUrl(

@@ -58,6 +58,7 @@ export default function ElectionForm({
   onUpdateElection,
   title,
 }: ElectionFormProps) {
+
   const [step, setStep] = useState<number>(0);
   const [data, setData] = useState<Maybe<Election | ElectionCreate>>(election);
   const [edfUid, setEDFUid] = useState<string>(
@@ -65,7 +66,10 @@ export default function ElectionForm({
   );
   const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>({});
   const router = useRouter();
+  console.log('Inside electionform:')
   console.log(data)
+  const ballotCount = Object.keys((data as Election)?.ballotDefinitions)?.length || 0;
+  console.log('Ballot count: ' + ballotCount)
 
   const steps = [
     "Election Name",
@@ -435,11 +439,14 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Upload Ballot Files</Typography>
         <FileUpload
+          multiple={true}
           onLoadFile={async (file) => {
+            console.log('Got file')
+            console.log(file.name, file.size)
             if ((data as Election)?.electionId) {
               const resp = await setBallotDefinitions(
                 (data as Election).electionId,
-                []
+                { file, ballotID: file.name }
               );
               setData(resp);
               return;
@@ -455,8 +462,8 @@ export default function ElectionForm({
           {(data as Election)?.ballotDefinitionCount || 0} ballot definitions
           uploaded
         </CompletedCheckbox>
-        <CompletedCheckbox isComplete={(data as Election)?.ballotCount > 0}>
-          {(data as Election)?.ballotCount || 0} ballot files uploaded
+        <CompletedCheckbox isComplete={ballotCount > 0}>
+          {ballotCount} ballot files uploaded
         </CompletedCheckbox>
       </Grid>
     </Grid>

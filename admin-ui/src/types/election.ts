@@ -32,6 +32,7 @@ export type Election = ElectionCreate & {
   testVoterCount: number;
   ballotDefinitionCount: number;
   ballotCount: number;
+  ballotDefinitions: {[key: string]: string};
 
   electionDefinitionFile?: string;
   ballotsFile?: string;

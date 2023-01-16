@@ -104,10 +104,11 @@ const toBase64 = (file: File) =>
   });
 
 // In MVP /provisionUpload also saves the file locally and serves it (acting as mock upload)
-export const uploadFileNew = async (file: File) => {
+export const uploadFileNew = async (file: File, _fileName?: string) => {
   const { uploadUrl, fileName } = await post("/provisionUpload", {
     contentType: file.type,
-  });
+    fileName: _fileName
+  })
 
   const formData = new FormData();
   formData.append("file", file);

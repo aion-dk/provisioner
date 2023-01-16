@@ -162,16 +162,23 @@ export const getElectionDefinitionStatus = async (uuid: string) => {
 
 export const setBallotDefinitions = async (
   electionId: string,
-  ballots: Array<BallotFile>
+  ballot: BallotFile
 ) => {
-  return await post(
-    `/setBallotDefinitions`,
-    {
-      electionId,
-      ballots,
-    },
-    { defaultReturn: { success: true } }
-  );
+  try {
+    const fileName = await uploadFileNew(ballot.file, ballot.ballotID)
+
+    return await post(
+      `/setBallotDefinitions`,
+      {
+        electionId,
+        ballotFile: fileName,
+      },
+      { defaultReturn: { success: true } }
+    );
+  } catch (e) {
+    console.log('Exception:')
+    console.log(e)
+  }
 };
 
 export const setElectionVoters = async (electionId: string, voterListFile: File) => {

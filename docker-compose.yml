@@ -1,21 +1,21 @@
 version: "3"
 services:
-  ui:
-    image: "provisioner-ui:latest"
-    # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner-ui:main"
-    command: "npm run dev"
-    build: "./admin-ui"
-    depends_on:
-      - "api"
-    links:
-      - "api:provisioner-api"
-    volumes:
-      - "./admin-ui:/usr/src/app"
-      - "/usr/src/app/node_modules"
-    ports:
-      - "3021:3021"
-    environment:
-      NEXT_PUBLIC_API_URL_BASE: "http://provisioner-api:3009"
+  # ui:
+  #   image: "provisioner-ui:latest"
+  #   # image: "534003348933.dkr.ecr.eu-west-1.amazonaws.com/provisioner-ui:main"
+  #   command: "npm run dev"
+  #   build: "./admin-ui"
+  #   depends_on:
+  #     - "api"
+  #   links:
+  #     - "api:provisioner-api"
+  #   volumes:
+  #     - "./admin-ui:/usr/src/app"
+  #     - "/usr/src/app/node_modules"
+  #   ports:
+  #     - "3021:3021"
+  #   environment:
+  #     NEXT_PUBLIC_API_URL_BASE: "http://provisioner-api:3009"
 
   api:
     image: "provisioner-api:latest"
