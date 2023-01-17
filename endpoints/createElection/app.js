@@ -25,7 +25,6 @@ exports.lambdaHandler = async (event, context, callback) => {
   }
 
   if (electionId) {
-    //Update request
     const election = await Election.findByElectionId(electionId);
     if (!election) {
       return ApiResponse.noMatchingElection(electionId);
@@ -42,8 +41,6 @@ exports.lambdaHandler = async (event, context, callback) => {
       }
     }
   } else {
-    //Create request
-
     const election = await Election.create(messageBody, context.awsRequestId);
 
     if (!election) {

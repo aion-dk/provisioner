@@ -66,14 +66,12 @@ export default function ElectionForm({
   );
   const [edfStatus, setEDFStatus] = useState<{ [x: string]: any }>({});
   const router = useRouter();
-  console.log(data)
   const ballotCount = (data as Election)?.ballotFiles ? Object.keys((data as Election).ballotFiles).length : 0
 
   const steps = [
     "Election Name",
     "Election Settings",
     "Ballot Data",
-    "Test Election",
     "Production Voter Data",
     "Review",
   ];
@@ -92,12 +90,10 @@ export default function ElectionForm({
   };
 
   const save = async () => {
-    let updatedElection: Maybe<Election> = null;
-    console.log(data)
+    let updatedElection:Election = null;
+
     if ((data as Election)?.electionId) {
-      console.log(data);
       updatedElection = await setElectionAttributes(data as Election);
-      console.log(updatedElection);
     } else {
       updatedElection = await createElection(data as ElectionCreate);
     }
@@ -274,7 +270,7 @@ export default function ElectionForm({
               value={data?.configurations?.multipleUsePermitted}
               onChange={(value: boolean | null) => {
                 handleConfigurationChange(
-                  "affidavitRequiresWitnessSignature",
+                  "multipleUsePermitted",
                   value
                 );
               }}
@@ -397,23 +393,18 @@ export default function ElectionForm({
           onLoadFile={async (file) => {
             if ((data as Election)?.electionId) {
               setEDFStatus({ status: "uploading" });
-              console.log("Uploading..");
-              console.log("ElectionId: " + (data as Election).electionId);
               const resp = await setElectionDefinition(
                 (data as Election).electionId,
                 file
               );
               if (resp) {
-                console.log("Got resp");
-                console.log(resp);
                 setEDFStatus(resp);
                 setEDFUid(resp.uuid);
 
                 // TODO: Again weird that it returns an array... should probably be looked into
                 // @ts-ignore
                 const newElectionDataResp = await getElection((data as Election).electionId) as Election[]
-                const newData = newElectionDataResp.find(x => x.electionId === (data as Election).electionId)
-                setData(newData)
+                setData(newElectionDataResp)
               }
               return;
             }
@@ -525,36 +516,6 @@ export default function ElectionForm({
     </Grid>
   );
 
-  const testElectionFields = (
-    <Grid container spacing={4}>
-      <GI xs={12}>
-        <Typography variant="h2">Test Your Election</Typography>
-      </GI>
-      <Grid item sm={6}>
-        <Typography variant="h3">Upload Test Voter List</Typography>
-        <FileUpload
-          onLoadFile={async (file) => {
-            if ((data as Election)?.electionId) {
-              const resp = await setTestVoterFile(
-                (data as Election).electionId,
-                file
-              );
-              setData(resp);
-              return;
-            }
-          }}
-        />
-      </Grid>
-      <Grid item sm={6}></Grid>
-      <Grid item sm={6}>
-        <Typography variant="h3">Test Data Upload Checklist</Typography>
-        <CompletedCheckbox isComplete={(data as Election)?.testVoterCount > 0}>
-          {(data as Election)?.testVoterCount || 0} voters uploaded
-        </CompletedCheckbox>
-      </Grid>
-    </Grid>
-  );
-
   let formContents: ReactNode = null;
   if (step === 0) {
     formContents = electionNameFields;
@@ -563,10 +524,8 @@ export default function ElectionForm({
   } else if (step === 2) {
     formContents = ballotDataFields;
   } else if (step === 3) {
-    formContents = testElectionFields;
-  } else if (step === 4) {
     formContents = voterDataFields;
-  } else if (step === 5) {
+  } else if (step === 4) {
     formContents = reviewFields;
   }
 
@@ -580,21 +539,9 @@ export default function ElectionForm({
         )}
       </Grid>
       <Grid item xs={6} sm={4} md={3}>
-        {step < steps.length - 1 && step !== 3 && (
+        {step < steps.length - 1 && step !== 4 && (
           <Button endIcon={<NavigateNextIcon />} onClick={saveNext}>
             Next
-          </Button>
-        )}
-        {step === 3 && (
-          <Button
-            endIcon={<ConstructionIcon />}
-            onClick={() => {
-              router.push(
-                `/elections/${(data as Election).electionId}/open-test`
-              );
-            }}
-          >
-            Begin Testing
           </Button>
         )}
         {step === steps.length - 1 && (

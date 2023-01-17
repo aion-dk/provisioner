@@ -18,19 +18,11 @@ export default function ElectionCard({
   currentElection,
   onUpdateElection,
 }: ElectionCardProps) {
-  // TODO load election data
   const [election, setElection] = useState<Election>(e);
 
   useEffect(() => {
-    if (!election.configurations) {
-
-      // TODO: Temp remove this call
-      // const resp = getElection(election.electionId).then((resp) => {
-      // console.log('No configurations, got this in response:')
-      // console.log(resp)
-      //   setElection(resp);
-      // });
-    }
+    const resp = getElection(election.electionId)
+      .then((resp) => { console.log(resp) ;setElection(resp); });
   }, []);
 
   const { configurations } = election;
@@ -77,16 +69,16 @@ export default function ElectionCard({
         </Grid>
         <Grid item xs={6} sm={4}>
           <Typography variant="subtitle1">Election Data</Typography>
-          <CompletedCheckbox isComplete={election.ballotDefinitionCount > 0}>
+          <CompletedCheckbox isComplete={election.electionDefinitionCount > 0}>
             Ballot Definitions Uploaded
           </CompletedCheckbox>
-          <CompletedCheckbox isComplete={election.ballotCount > 0}>
+          <CompletedCheckbox isComplete={election.ballotFilesCount > 0}>
             Ballots Uploaded
           </CompletedCheckbox>
           <CompletedCheckbox
             isComplete={
-              election.ballotDefinitionCount > 0 &&
-              election.ballotDefinitionCount === election.ballotCount
+              election.electionDefinitionCount > 0 &&
+              election.electionDefinitionCount === election.ballotFilesCount
             }
           >
             Ballot Count Matches Definitions Count
@@ -95,7 +87,7 @@ export default function ElectionCard({
         <Grid item xs={6} sm={4}>
           <Typography variant="subtitle1">Voter Data</Typography>
           <CompletedCheckbox isComplete={election.voterCount > 0}>
-            Voter CSV Uploaded
+            Voter List Uploaded
           </CompletedCheckbox>
         </Grid>
         {election.electionStatus === ElectionStatus.live && (

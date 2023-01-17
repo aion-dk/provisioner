@@ -35,22 +35,6 @@ export const getAll = async (): Promise<Array<Election>> => {
   return await get("/getElection", { defaultReturn: [defaultElection] });
 };
 
-const ensureConfigurationsObject = async (election: Election): Promise<Election> => {
-  console.log(election);
-  // Previous
-  // if (election.configurations && typeof election.configurations === "string") {
-  //   election.configurations = JSON.parse(election.configurations as string);
-  // }
-  // return election;
-  try {
-    return await get("/getElection", { defaultReturn: [defaultElection] });
-  } catch (err: any) {
-    console.log(err?.response?.data);
-    return election
-    // return [];
-  }
-};
-
 export const getCurrentElection = async (): Promise<Maybe<Election>> => {
   try {
     return await get("/getCurrentElection");
@@ -80,7 +64,7 @@ export const createElection = async (
   const resp = await post("/createElection", election, {
     defaultReturn: { electionId: defaultElection.electionId },
   });
-  return ensureConfigurationsObject(resp);
+  return resp;
 };
 
 export const setElectionAttributes = async (
@@ -91,7 +75,7 @@ export const setElectionAttributes = async (
   const resp = await post("/setElectionAttributes", election, {
     defaultReturn: defaultElection,
   });
-  return ensureConfigurationsObject(resp);
+  return resp;
 };
 
 export const getElection = async (electionId: string): Promise<Election> => {
@@ -102,7 +86,7 @@ export const getElection = async (electionId: string): Promise<Election> => {
     },
     { defaultReturn: defaultElection }
   );
-  return ensureConfigurationsObject(resp);
+  return resp;
 };
 
 // export const getConfiguration = async(electionId:  string): Promise<ElectionConfiguration> => {
@@ -122,7 +106,7 @@ export const setElectionConfigurations = async (
     },
     { defaultReturn: defaultElectionData }
   );
-  return ensureConfigurationsObject(resp);
+  return resp;
 };
 
 //ElectionDefinition
