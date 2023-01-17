@@ -29,24 +29,18 @@ exports.lambdaHandler = async (event, context, callback) => {
         election.attributes.servingStatus == Election.servingStatus.closed ||
         election.attributes.servingStatus == Election.servingStatus.lookup
       ) {
-        if (!election.attributes.testCount) {
-          return ApiResponse.makeFullErrorResponse(
-            "Invalid state transition",
-            "Election must be tested before it can be opened."
-          );
-        } else {
-          await election.update({ 
-            electionStatus: Election.electionStatus.live, 
-            servingStatus: Election.servingStatus.open 
-          });
-          return ApiResponse.makeResponse(200, election.attributes);
-        }
+        await election.update({
+          electionStatus: Election.electionStatus.live,
+          servingStatus: Election.servingStatus.open
+        });
+
+        return ApiResponse.makeResponse(200, election.attributes);
       } else {
         return ApiResponse.makeFullErrorResponse(
           "Invalid state transition",
           "Election in state " +
-            election.attributes.servingStatus +
-            " cannot be opened."
+          election.attributes.servingStatus +
+          " cannot be opened."
         );
       }
     }
