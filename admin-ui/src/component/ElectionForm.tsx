@@ -24,7 +24,7 @@ import DatePicker from "component/DatePicker";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import CheckIcon from "@mui/icons-material/Check";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 
 import {
   setTestVoterFile,
@@ -385,6 +385,28 @@ export default function ElectionForm({
     </Grid>
   );
 
+  const onLoadBallot = useCallback(async (file: File) => {
+    if ((data as Election)?.electionId) {
+      const resp = await setBallotDefinitions(
+        (data as Election).electionId,
+        { file, ballotID: file.name }
+      );
+      setData(resp);
+      return;
+    }
+  }, [data, setData])
+
+  const onLoadVoterList = useCallback(async (file: File) => {
+    if ((data as Election)?.electionId) {
+      const resp = await setElectionVoters(
+        (data as Election).electionId,
+        file
+      );
+      setData({...(data as Election), voterCount: resp.voterCount})
+      return;
+    }
+  }, [data, setData])
+
   const ballotDataFields = (
     <Grid container spacing={4}>
       <Grid item sm={6}>
@@ -432,16 +454,7 @@ export default function ElectionForm({
         <Typography variant="h3">Upload Ballot Files</Typography>
         <FileUpload
           multiple={true}
-          onLoadFile={async (file) => {
-            if ((data as Election)?.electionId) {
-              const resp = await setBallotDefinitions(
-                (data as Election).electionId,
-                { file, ballotID: file.name }
-              );
-              setData(resp);
-              return;
-            }
-          }}
+          onLoadFile={onLoadBallot}
         />
       </Grid>
       <Grid item>
@@ -468,19 +481,7 @@ export default function ElectionForm({
       <Grid item sm={6}>
         <Typography variant="h3">Production Voter List</Typography>
         <FileUpload
-          onLoadFile={async (file) => {
-            if ((data as Election)?.electionId) {
-              const resp = await setElectionVoters(
-                (data as Election).electionId,
-                file
-              );
-              if (resp) {
-                console.log("Got resp");
-                console.log(resp);
-              }
-              return;
-            }
-          }}
+          onLoadFile={onLoadVoterList}
         />
       </Grid>
       <Grid item sm={6}>

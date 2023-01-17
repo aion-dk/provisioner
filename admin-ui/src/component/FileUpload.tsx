@@ -52,7 +52,7 @@ export default function FileUpload({
       //setAlert(`${multiple ? acceptedFiles.length + ' ' : ''}File${multiple ? 's' : ''} uploaded`)
     }
     processAcceptedFiles();
-  }, [])
+  }, [onLoadFile])
 
   const {getRootProps, getInputProps, isDragActive} = useDropzone({
     onDrop,
