@@ -25,7 +25,7 @@ exports.lambdaHandler = async (event, context, callback) => {
     if (!election) {
       return ApiResponse.noMatchingElection(electionId);
     } else {
-      await election.update({ configurations: configurations });
+      await election.update({ configurations: {...election.attributes.configurations, ...configurations }  });
       return ApiResponse.makeResponse(200, election.attributes);
     }
   }
