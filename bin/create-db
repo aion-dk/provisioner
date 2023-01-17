@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+aws dynamodb create-table --cli-input-json file://db-json/create-application-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb create-table --cli-input-json file://db-json/create-election-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb create-table --cli-input-json file://db-json/create-files-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb create-table --cli-input-json file://db-json/create-voter-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb create-table --cli-input-json file://db-json/create-voter-sessions-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+

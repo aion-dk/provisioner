@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+aws dynamodb batch-write-item --request-items file://db-json/populate-election-table.json --endpoint-url http://localhost:8000 --output json --no-paginate
+
+aws dynamodb batch-write-item --request-items file://db-json/populate-voter-1.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb batch-write-item --request-items file://db-json/populate-voter-2.json --endpoint-url http://localhost:8000 --output json --no-paginate
+aws dynamodb batch-write-item --request-items file://db-json/populate-voter-3.json --endpoint-url http://localhost:8000 --output json --no-paginate
+
+aws dynamodb batch-write-item --request-items file://db-json/populate-application.json --endpoint-url http://localhost:8000 --output json --no-paginate
