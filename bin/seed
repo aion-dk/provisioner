@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -6,6 +6,6 @@ echo "creating database..."
 ./bin/create-db
 
 echo "setting up database..."
-./bin/seed-db.sh
+./bin/seed-db
 
 echo "done"
